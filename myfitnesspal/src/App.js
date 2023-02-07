@@ -7,9 +7,7 @@ import { Navbar } from './Components/Routes/Navbar';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <AllRoutes />
-      
+      <h1>App Component</h1>
     </div>
   );
 }
