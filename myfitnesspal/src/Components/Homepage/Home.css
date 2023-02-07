@@ -32,6 +32,8 @@
     background-color: rgb(10,82,130);
     color: #fff;
     padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #top-header > div {
     display: flex;
@@ -39,14 +41,134 @@
 #top-header>h2{
     font-weight: 300;
     font-size: large;
+    padding-right: 5px;
 }
 #top-header>div>div>p{
     font-size: x-small;
+    
     padding-left: 4px;
     font-weight: 500;
 }
 #calculator{
     border: 2px solid green;
-    height: 300px;
+    height: 200px;
+    display: flex;
     background-color: rgb(246,246,246);
+}
+.upload-img{
+    width: 20%;
+    border: 1px solid red;
+    height: 85%;
+    margin: 2% 1% 1% 2%;
+    background-color: #fff;
+}
+.calculations{
+    border: 2px solid blue;
+    width: 75%;
+    margin: 2% 1% 2% 2%;
+}
+#calculations-top{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+#calculations-top > div > h1{
+    color: green;
+    height: 60px;
+    font-size: xxx-large;
+    font-weight: 400;
+}
+#calculations-top > div:nth-child(2) > button:nth-child(1){
+    height: 30px;
+    background-color: #fff;
+}
+#calculations-top > div:nth-child(2) > button:nth-child(2){
+    height: 30px;
+    background-color: #fff;
+}
+#calculations-bottom{
+    display: flex;
+}
+#calculations-bottom > div:nth-child(1){
+    width: 22%;
+}
+#calculations-bottom > div:nth-child(2){
+    width: 22%;
+}
+#calculations-bottom > div:nth-child(3){
+    width: 22%;
+}
+#calculations-bottom > div:nth-child(4){
+    width: 22%;
+}
+#scroll-bar{
+    display: flex;
+    background-color: rgb(246,246,246);
+}
+#lbs-gained{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: 0 1% 2% 2%;
+}
+
+/* #clipboard-icon{
+
+} */
+#bar{
+    border: 1px solid orange;
+    height: 20px;
+    width: 70%;
+    margin: 0 1% 2% 2%;
+}
+#confirm-mail{
+    margin-top: 3%;
+    background-color: rgb(246,246,246);
+    display: flex;
+    border: 2px solid blue;
+}
+#confirm-mail > div:nth-child(1){
+    width: 15%;
+    max-width: 2% 1% 2% 2%;
+    margin-top: 10%;
+}
+#confirm-mail > div:nth-child(2){
+    width: 70%;
+    border: 1px solid red;
+}
+#confirm-mail > div:nth-child(2)>h3{
+    color: rgb(10,82,130);
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
+#confirm-mail > div:nth-child(2)>p:nth-child(1){
+    margin-bottom: 3%;
+    font-weight: 400;
+    margin-top: 10%;
+}
+#confirm-mail > div:nth-child(2)>p:nth-child(2){
+    /* font-weight: 700; */
+    margin-bottom: 3%;
+    
+    color: gray;
+}
+#confirm-mail > div:nth-child(3)>button{
+    height: 80px;
+    color: #fff;
+    background-color: rgb(0,102,238);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10%;
+    margin-bottom: 8%;
+}
+#confirm-mail > div:nth-child(3)>p{
+    color: blue;
+    width: 60%;
+    font-weight: 200;
+    font-size: small;
+    align-items: center;
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-bottom: 8%;
 }
