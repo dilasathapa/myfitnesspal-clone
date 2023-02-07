@@ -73,7 +73,8 @@
     border: 1px solid black;
 }
 #calculations-top > div > h1{
-    color: green;
+    /* color: green; */
+    color: rgb(133,196,0);
     height: 60px;
     font-size: xxx-large;
     font-weight: 400;
@@ -137,11 +138,14 @@
     border: 1px solid red;
 }
 #confirm-mail > div:nth-child(2)>h3{
+    padding-left: 5%;
     color: rgb(10,82,130);
     margin-bottom: 3%;
     margin-top: 5%;
+    font-weight: 600;
 }
 #confirm-mail > div:nth-child(2)>p:nth-child(1){
+    /* padding-left: 5%; */
     margin-bottom: 3%;
     font-weight: 400;
     margin-top: 10%;
@@ -149,8 +153,11 @@
 #confirm-mail > div:nth-child(2)>p:nth-child(2){
     /* font-weight: 700; */
     margin-bottom: 3%;
-    
+    padding-left: 5%;
     color: gray;
+}
+#confirm-mail > div:nth-child(2)>p:nth-child(3){
+    padding-left: 5%;
 }
 #confirm-mail > div:nth-child(3)>button{
     height: 80px;
@@ -161,6 +168,7 @@
     border-radius: 5px;
     margin-top: 10%;
     margin-bottom: 8%;
+    margin-left: 15%;
 }
 #confirm-mail > div:nth-child(3)>p{
     color: blue;
@@ -171,4 +179,118 @@
     margin-left: 20%;
     margin-top: 3%;
     margin-bottom: 8%;
+}
+#news-feed{
+    border: 2px solid red;
+    margin-top: 3%;
+}
+#news-feed > div:nth-child(1) > h3{
+    color: #fff;
+    background-color: rgb(10,82,130);
+    height: 20px;
+    align-items: center;
+    /* text-align: center; */
+    padding: 10px;
+    padding-left: 3%;
+    font-weight: 100;
+}
+#textarea{
+    width: 75%;
+    margin: 3% 0 2% 3%;
+}
+#news-feed > div:nth-child(2){
+    display: flex;
+}
+#news-feed > div:nth-child(2) > div>button{
+    /* width: 40%; */
+    /* border: 1px solid ; */
+    border: none;
+    margin: 40% 3% 2% 50%; 
+    height: 40px;
+    width: 200%;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgb(0,102,238);
+    /* padding-left: 20%;  */
+}
+#right-bar > div:nth-child(1){
+    height: 250px;
+}
+#right-bar div:nth-child(1) > h5{
+    font-size: medium;
+    margin-left: 6%;
+}
+#right-bar div:nth-child(1) > p{
+    color: rgb(25,121,243);
+    font-size: small;
+    margin: 4% 0 4% 0;
+    margin-left: 6%;
+}
+#right-bar div:nth-child(1) > ul{
+    margin-top: 5%;
+    
+    color: rgb(25,121,243);
+    font-size: small;
+    font-weight: 100;
+}
+
+#right-bar > div:nth-child(2) > div>h1{
+    color: rgb(25,121,243);
+}
+#right-bar > div:nth-child(2) > div>button{
+    background-color: rgb(25,121,243);
+    color: #fff;
+    border: none;
+    padding: 4px;
+    margin-left: 2px;
+    border-radius: 2px;
+}
+#right-bar > div:nth-child(2) > div>h1>sup{
+    font-size: small;
+}
+#right-bar > div:nth-child(2) > div:nth-child(1)>button{
+    margin-top: 3%;
+}
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(1){
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(3){
+    margin-top: 3%;
+    color: rgb(25,121,243);
+    margin-bottom: 3%;
+}
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(5){
+    margin-top: 3%;
+    color: rgb(25,121,243);
+    font-size: small;
+    margin-bottom: 8%;
+}
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(6){
+    margin-top: 3%;
+    color: rgb(25,121,243);
+    margin-bottom: 3%;
+}
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(8){
+    margin-top: 3%;
+    color: rgb(25,121,243);
+    font-size: small;
+    margin-bottom: 8%;
+}
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(9){
+    margin-top: 3%;
+    color: rgb(25,121,243);
+    margin-bottom: 3%;
+}
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(11){
+    margin-top: 3%;
+    color: rgb(25,121,243);
+    font-size: small;
+    margin-bottom: 8%;
+}
+#right-bar > div:nth-child(2) > div:nth-child(2)>p:nth-child(4){
+    margin-top: 3%;
+    font-weight: 100;
+    font-size: medium;
 }
