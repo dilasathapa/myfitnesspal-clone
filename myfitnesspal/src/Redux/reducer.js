@@ -18,29 +18,38 @@ const initialState = {
         "protein": 1,
         "sodium": 2,
         "sugar": 21
-    },
-    {
-        "id": 3,
-        "item": "Banana",
-        "calories": 105,
-        "carbs": 27,
-        "fat": 0,
-        "protein": 1,
-        "sodium": 1,
-        "sugar": 14
-    },
-    {
-        "id": 4,
-        "item": "Poha",
-        "calories": 330,
-        "carbs": 69,
-        "fat": 6,
-        "protein": 7,
-        "sodium": 420,
-        "sugar": 2
-    }],
+    },],
     Lunch: [],
-    Dinner: [],
+    Dinner: [{
+        "id": 8,
+        "item": "Chapati",
+        "calories": 72,
+        "carbs": 15,
+        "fat": 0,
+        "protein": 3,
+        "sodium": 190,
+        "sugar": 0
+    },
+    {
+        "id": 9,
+        "item": "Paneer curry",
+        "calories": 108,
+        "carbs": 6,
+        "fat": 7,
+        "protein": 5,
+        "sodium": 0,
+        "sugar": 5
+    },
+    {
+        "id": 10,
+        "item": "Sweets",
+        "calories": 340,
+        "carbs": 61,
+        "fat": 0,
+        "protein": 4,
+        "sodium": 0,
+        "sugar": 0
+    }],
     Snacks: [],
 };
 

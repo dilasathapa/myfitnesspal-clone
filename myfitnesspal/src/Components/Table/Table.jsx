@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import styles from "./Table.module.css";
+import { Link } from "react-router-dom";
 
 export default function Table({ meal }) {
   const foodItems = useSelector((data) => {
@@ -59,13 +60,39 @@ export default function Table({ meal }) {
           })
         }
         <tr className={styles.mealTotalRow}>
-          <td>Add Food | Quick Tools</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
+          <td>
+            <Link to={`/add_food?meal=${meal}`}>Add Food</Link> | Quick Tools
+          </td>
+          <td>
+            {foodItems.reduce((acc, el) => {
+              return acc + el.calories;
+            }, 0)}
+          </td>
+          <td>
+            {foodItems.reduce((acc, el) => {
+              return acc + el.carbs;
+            }, 0)}
+          </td>
+          <td>
+            {foodItems.reduce((acc, el) => {
+              return acc + el.fat;
+            }, 0)}
+          </td>
+          <td>
+            {foodItems.reduce((acc, el) => {
+              return acc + el.protein;
+            }, 0)}
+          </td>
+          <td>
+            {foodItems.reduce((acc, el) => {
+              return acc + el.sodium;
+            }, 0)}
+          </td>
+          <td>
+            {foodItems.reduce((acc, el) => {
+              return acc + el.sugar;
+            }, 0)}
+          </td>
         </tr>
       </tbody>
     </table>

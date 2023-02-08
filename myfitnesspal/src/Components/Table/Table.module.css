@@ -40,3 +40,14 @@
     color: rgb(0, 84, 143);
     font-size: 15px;
 }
+
+.mealTotalRow button {
+    border: none;
+    background-color: white;
+    color: rgb(0, 84, 143);
+}
+
+.mealTotalRow button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

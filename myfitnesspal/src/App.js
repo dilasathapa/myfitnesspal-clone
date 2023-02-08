@@ -1,10 +1,12 @@
 import './App.css';
-import Food from './Pages/Food/Food';
+import AllRoutes from './Components/Routes/AllRoutes';
+import Navbar from './Components/Routes/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <Food />
+      <Navbar />
+      <AllRoutes />
     </div>
   );
 }
