@@ -7,18 +7,9 @@ export default function Table({ meal }) {
   const dispatch = useDispatch();
 
   const foodItems = useSelector((data) => {
-    switch (meal) {
-      case "Breakfast":
-        return data.Breakfast;
-      case "Lunch":
-        return data.Lunch;
-      case "Dinner":
-        return data.Dinner;
-      case "Snacks":
-        return data.Snacks;
-    }
+    return data[meal];
   });
-  // console.log(foodItems);
+  console.log(foodItems);
 
   const deleteItemFromMeal = (id) => {
     dispatch(removeFoodThunkActionCreator(meal, id));
