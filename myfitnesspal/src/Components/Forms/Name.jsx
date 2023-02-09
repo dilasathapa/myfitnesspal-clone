@@ -12,6 +12,10 @@ export default function Name() {
         <h4>What’s your first name?</h4>
         <input placeholder='First Name'/>
       </div>
+      <div>
+      <Link style={startButton} to='/start'>BACK</Link>
+      <Link style={startButton} to='/start'>NEXT</Link>
+      </div>
     </div>
   )
 }
