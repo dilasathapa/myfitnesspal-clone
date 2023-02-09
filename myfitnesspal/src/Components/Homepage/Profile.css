@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
 }
 
 #profile-parent {
@@ -10,6 +11,9 @@
     border: 2px solid blue;
     width: 60%;
     margin: 2% auto;
+}
+#profile-info > h1{
+    margin-left: 2%;
 }
 #info{
     padding: 10px;
@@ -71,6 +75,8 @@
 } 
 #bottom-info{
     display: flex;
+    background-color: #fff;
+    margin-left: 4%;
 }
 #bottom-info > div:nth-child(1) > h3{
     color:rgb(0,102,238); 
@@ -83,7 +89,7 @@ margin-top: 3%;
 font-size: small;
 }
 #bottom-info > div:nth-child(2){
-    width: 60%;
+    width: 64%;
     margin-left: 6%;
 }
 .share-button{
@@ -93,6 +99,8 @@ font-size: small;
 #newsfeed{
     border: 2px solid red;
     margin-top: 3%;
+    height: 130px;
+    background-color: rgb(246,246,246);
 }
 #newsfeed > div:nth-child(1) > h3{
     color: #fff;
@@ -110,6 +118,7 @@ font-size: small;
 }
 #newsfeed > div:nth-child(2){
     display: flex;
+    /* background-color: rgb(246,246,246); */
 }
 #newsfeed > div:nth-child(2) > div>button{
     /* width: 40%; */
@@ -123,24 +132,3 @@ font-size: small;
     background-color: rgb(0,102,238);
     /* padding-left: 20%;  */
 }
-/* #textarea{
-    width: 75%;
-    margin: 3% 0 2% 3%;
-    height: 50px;
-}
-#newsfeed{
-    display: flex;
-}
-#newsfeed button{
- /* width: 40%; */
-    /* border: 1px solid ; 
-    border: none;
-    margin: 40% 3% 2% 30%; 
-    height: 40px;
-    width: 250%;
-    border-radius: 3px;
-    color: #fff;
-    background-color: rgb(0,102,238);
-    padding: 10px; 
-    align-items: center;
-} */
