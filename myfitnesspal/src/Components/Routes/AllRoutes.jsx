@@ -14,9 +14,10 @@ import Statments from "../Forms/Statement";
 import { Stress,Baseline } from "../Forms/Statement";
 import { PersonaData1, PersonaData2,Login,Username } from "../Forms/PersonalData1";
 import { Calorie } from "../Forms/PersonalData1";
+import { NavbarChange } from "./Navbar-real";
 
 const AllRoutes = () =>{
-    
+
 
     return (
         <div>
@@ -37,6 +38,7 @@ const AllRoutes = () =>{
                 <Route path='/login' element={<Login />}></Route>
                 <Route path='/username' element={<Username />}></Route>
                 <Route path='/calorie' element={<Calorie />}></Route>
+                <Route path="/changednavbar" element={<NavbarChange />}></Route>
 
             </Routes>
         </div>
