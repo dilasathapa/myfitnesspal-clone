@@ -184,6 +184,7 @@
 #news-feed{
     border: 2px solid red;
     margin-top: 3%;
+    background-color: rgb(246,246,246);
 }
 #news-feed > div:nth-child(1) > h3{
     color: #fff;
