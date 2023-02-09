@@ -1,29 +1,27 @@
-import React from 'react'
+import React from 'react'     //2
 import { Link } from "react-router-dom";
+import "./Start.css";
+import "./Name.css";
 
 export default function Name() {
   return (
     <div>
-      <div style={header}>
+      <div id='head'>
         <img src="https://seekvectorlogo.com/wp-content/uploads/2022/02/myfitnesspal-vector-logo-2022.png" style={{height:"90px"}}/>
-        <Link style={{textDecoration:"none",color: "black"}} to='/start'><h4>LOG IN</h4></Link>
       </div>
-      <div style={{}}>
-        <h4>What’s your first name?</h4>
-        <input placeholder='First Name'/>
+      <div id='mainDiv'>
+        <div id='mainDiv-top'>
+          <h3>What’s your first name?</h3><br/>
+          <p>We’re happy you’re here.</p>
+          <p>Let’s get to know a little about you.</p>
+          <input placeholder='First Name'/>
+        </div>
+        <div>
+        <Link id='backbtn' to='/start'><button>BACK</button></Link>
+        <Link id='nextbtn' to='/goals'><button>NEXT</button></Link>
+        </div>
       </div>
-      <div>
-      <Link style={startButton} to='/start'>BACK</Link>
-      <Link style={startButton} to='/start'>NEXT</Link>
-      </div>
+      
     </div>
   )
-}
-
-var header = {
-    display: "flex",
-    height: "75px",
-    justifyContent: "space-around",
-    // boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px"
-    marginBottom: "50px"
 }
