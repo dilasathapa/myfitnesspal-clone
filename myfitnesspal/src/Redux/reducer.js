@@ -1,60 +1,57 @@
+import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS } from "./actionTypes"
+
 const initialState = {
-    Breakfast: [{
-        "id": 1,
-        "item": "Almonds",
-        "calories": 164,
-        "carbs": 6,
-        "fat": 14,
-        "protein": 6,
-        "sodium": 0,
-        "sugar": 1
-    },
-    {
-        "id": 2,
-        "item": "Apple",
-        "calories": 104,
-        "carbs": 28,
-        "fat": 0,
-        "protein": 1,
-        "sodium": 2,
-        "sugar": 21
-    },],
+    Breakfast: [],
     Lunch: [],
-    Dinner: [{
-        "id": 8,
-        "item": "Chapati",
-        "calories": 72,
-        "carbs": 15,
-        "fat": 0,
-        "protein": 3,
-        "sodium": 190,
-        "sugar": 0
-    },
-    {
-        "id": 9,
-        "item": "Paneer curry",
-        "calories": 108,
-        "carbs": 6,
-        "fat": 7,
-        "protein": 5,
-        "sodium": 0,
-        "sugar": 5
-    },
-    {
-        "id": 10,
-        "item": "Sweets",
-        "calories": 340,
-        "carbs": 61,
-        "fat": 0,
-        "protein": 4,
-        "sodium": 0,
-        "sugar": 0
-    }],
+    Dinner: [],
     Snacks: [],
 };
 
-function reducer(state = initialState, action) {
-    return state;
+function reducer(state = initialState, { type, payload }) {
+    switch (type) {
+        case ADD_TO_BREAKFAST: return {
+            ...state,
+            Breakfast: [...state.Breakfast, payload],
+        }
+        case ADD_TO_LUNCH: return {
+            ...state,
+            Lunch: [...state.Lunch, payload],
+        }
+        case ADD_TO_DINNER: return {
+            ...state,
+            Dinner: [...state.Dinner, payload],
+        }
+        case ADD_TO_SNACKS: return {
+            ...state,
+            Snacks: [...state.Snacks, payload],
+        }
+        case REMOVE_FROM_BREAKFAST: return {
+            ...state,
+            Breakfast: state.Breakfast.filter((el) => {
+                return el.id !== payload;
+            })
+        }
+        case REMOVE_FROM_LUNCH: return {
+            ...state,
+            Lunch: state.Lunch.filter((el) => {
+                return el.id !== payload;
+            })
+        }
+        case REMOVE_FROM_DINNER: return {
+            ...state,
+            Dinner: state.Dinner.filter((el) => {
+                return el.id !== payload;
+            })
+        }
+        case REMOVE_FROM_SNACKS: return {
+            ...state,
+            Snacks: state.Snacks.filter((el) => {
+                return el.id !== payload;
+            })
+        }
+        default: return state;
+    }
+
 }
 
 export { reducer };

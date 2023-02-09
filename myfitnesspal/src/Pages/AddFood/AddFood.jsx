@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import styles from "./AddFood.module.css";
 import { useDispatch } from "react-redux";
+import { addFoodThunkActionCreator } from "../../Redux/action";
 
 export default function AddFood() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [searchParams, setSearchParams] = useSearchParams();
   const meal = searchParams.get("meal");
@@ -42,6 +44,11 @@ export default function AddFood() {
       });
   };
 
+  const addToMeal = () => {
+    dispatch(addFoodThunkActionCreator(meal, searchResult[0]));
+    navigate("/food");
+  };
+
   return (
     <div className={styles.AddFood}>
       <div>
@@ -63,13 +70,15 @@ export default function AddFood() {
               }}
             />
             <div id={styles.searchResultDiv}>
-              {searchResult && searchResult.length > 0 ? (
-                <div>
-                  {searchResult[0].item} <button>Add to meal</button>
-                </div>
-              ) : (
-                <div>No results found</div>
-              )}
+              {searchResult &&
+                (searchResult.length > 0 ? (
+                  <div>
+                    {searchResult[0].item}{" "}
+                    <button onClick={addToMeal}>Add to meal</button>
+                  </div>
+                ) : (
+                  <div>No results found</div>
+                ))}
             </div>
             <button id={styles.searchBtn} onClick={searchForItem}>
               Search

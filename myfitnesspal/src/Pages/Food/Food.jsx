@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import Table from "../../Components/Table/Table";
+import TotalTable from "../../Components/TotalTable/TotalTable";
 import styles from "./Food.module.css";
 
 export default function Food() {
@@ -27,6 +28,7 @@ export default function Food() {
           <Table meal="Lunch" />
           <Table meal="Dinner" />
           <Table meal="Snacks" />
+          <TotalTable breakfast={storeData.Breakfast} lunch={storeData.Lunch} dinner={storeData.Dinner} snacks={storeData.Snacks} />
 
         </div>
       </div>

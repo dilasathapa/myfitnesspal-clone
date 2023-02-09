@@ -1,8 +1,11 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./Table.module.css";
 import { Link } from "react-router-dom";
+import { removeFoodThunkActionCreator } from "../../Redux/action";
 
 export default function Table({ meal }) {
+  const dispatch = useDispatch();
+
   const foodItems = useSelector((data) => {
     switch (meal) {
       case "Breakfast":
@@ -15,7 +18,11 @@ export default function Table({ meal }) {
         return data.Snacks;
     }
   });
-  console.log(foodItems);
+  // console.log(foodItems);
+
+  const deleteItemFromMeal = (id) => {
+    dispatch(removeFoodThunkActionCreator(meal, id));
+  };
 
   return (
     <table className={styles.Table}>
@@ -55,6 +62,15 @@ export default function Table({ meal }) {
                 <td>{el.protein}</td>
                 <td>{el.sodium}</td>
                 <td>{el.sugar}</td>
+                <td>
+                  <i
+                    class="fa-solid fa-circle-minus"
+                    style={{ color: "red", cursor: "pointer" }}
+                    onClick={() => {
+                      deleteItemFromMeal(el.id);
+                    }}
+                  ></i>
+                </td>
               </tr>
             );
           })
