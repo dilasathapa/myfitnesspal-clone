@@ -1,10 +1,12 @@
-import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS } from "./actionTypes"
+import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES } from "./actionTypes"
 
 const initialState = {
     Breakfast: [],
     Lunch: [],
     Dinner: [],
     Snacks: [],
+    water_consumed: 0,
+    food_notes: "",
 };
 
 function reducer(state = initialState, { type, payload }) {
@@ -49,6 +51,15 @@ function reducer(state = initialState, { type, payload }) {
                 return el.id !== payload;
             })
         }
+        case ADD_WATER_CUPS: return {
+            ...state,
+            water_consumed: state.water_consumed + payload,
+        }
+        case SAVE_FOOD_NOTES: return {
+            ...state,
+            food_notes: payload,
+        }
+
         default: return state;
     }
 

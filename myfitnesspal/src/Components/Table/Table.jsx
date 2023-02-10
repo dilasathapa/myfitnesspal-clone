@@ -9,7 +9,7 @@ export default function Table({ meal }) {
   const foodItems = useSelector((data) => {
     return data[meal];
   });
-  console.log(foodItems);
+  // console.log(foodItems);
 
   const deleteItemFromMeal = (id) => {
     dispatch(removeFoodThunkActionCreator(meal, id));

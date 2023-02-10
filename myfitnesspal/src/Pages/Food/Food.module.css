@@ -1,9 +1,13 @@
 .Food {
     width: 75%;
     margin: 20px auto 50px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
+}
+
+.ads {
+    width: 100%;
 }
 
 .waterDiv {
@@ -64,5 +68,16 @@
     margin-bottom: 10px;
 }
 
+.waterRight textarea {
+    padding: 10px;
+    width: 90%;
+}
+
+#printBtn {
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
 
 

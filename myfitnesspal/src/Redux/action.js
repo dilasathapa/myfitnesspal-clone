@@ -1,4 +1,5 @@
-import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS } from "./actionTypes"
+import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES } from "./actionTypes"
+
 
 export const addFoodThunkActionCreator = (meal, item) => {
     return (dispatch, getState) => {
@@ -55,5 +56,23 @@ export const removeFoodThunkActionCreator = (meal, id) => {
                 break;
         }
         dispatch(actionObj);
+    }
+}
+
+export const addWaterThunkActionCreator = (payload) => {
+    return (dispatch, getState) => {
+        dispatch({
+            type: ADD_WATER_CUPS,
+            payload,
+        })
+    }
+}
+
+export const saveNotesThunkActionCreator = (payload) => {
+    return (dispatch, getState) => {
+        dispatch({
+            type: SAVE_FOOD_NOTES,
+            payload,
+        })
     }
 }
