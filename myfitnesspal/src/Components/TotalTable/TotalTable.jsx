@@ -1,6 +1,27 @@
+import { useEffect } from "react";
 import styles from "./TotalTable.module.css";
 
-export default function TotalTable({ breakfast, lunch, dinner, snacks }) {
+export default function TotalTable({
+  breakfast,
+  lunch,
+  dinner,
+  snacks,
+  isEatingEnough,
+  setIsEatingEnough,
+}) {
+  useEffect(() => {
+    if (
+      total.calories >= dailyGoal.calories &&
+      total.carbs >= dailyGoal.carbs &&
+      total.fat >= dailyGoal.fat &&
+      total.protein >= dailyGoal.protein &&
+      total.sodium >= dailyGoal.sodium &&
+      total.sugar >= dailyGoal.sugar
+    ) {
+      setIsEatingEnough(true);
+    }
+  }, []);
+
   const dailyGoal = {
     calories: 2310,
     carbs: 289,
@@ -10,93 +31,40 @@ export default function TotalTable({ breakfast, lunch, dinner, snacks }) {
     sugar: 87,
   };
 
-  const total = {
-    calories:
+  const calTotal = (nutrient) => {
+    return (
       breakfast.reduce((acc, el) => {
-        return acc + el.calories;
+        return acc + el[nutrient];
       }, 0) +
       lunch.reduce((acc, el) => {
-        return acc + el.calories;
+        return acc + el[nutrient];
       }, 0) +
       dinner.reduce((acc, el) => {
-        return acc + el.calories;
+        return acc + el[nutrient];
       }, 0) +
       snacks.reduce((acc, el) => {
-        return acc + el.calories;
-      }, 0),
-
-    carbs:
-      breakfast.reduce((acc, el) => {
-        return acc + el.carbs;
-      }, 0) +
-      lunch.reduce((acc, el) => {
-        return acc + el.carbs;
-      }, 0) +
-      dinner.reduce((acc, el) => {
-        return acc + el.carbs;
-      }, 0) +
-      snacks.reduce((acc, el) => {
-        return acc + el.carbs;
-      }, 0),
-
-    fat:
-      breakfast.reduce((acc, el) => {
-        return acc + el.fat;
-      }, 0) +
-      lunch.reduce((acc, el) => {
-        return acc + el.fat;
-      }, 0) +
-      dinner.reduce((acc, el) => {
-        return acc + el.fat;
-      }, 0) +
-      snacks.reduce((acc, el) => {
-        return acc + el.fat;
-      }, 0),
-
-    protein:
-      breakfast.reduce((acc, el) => {
-        return acc + el.protein;
-      }, 0) +
-      lunch.reduce((acc, el) => {
-        return acc + el.protein;
-      }, 0) +
-      dinner.reduce((acc, el) => {
-        return acc + el.protein;
-      }, 0) +
-      snacks.reduce((acc, el) => {
-        return acc + el.protein;
-      }, 0),
-
-    sodium:
-      breakfast.reduce((acc, el) => {
-        return acc + el.sodium;
-      }, 0) +
-      lunch.reduce((acc, el) => {
-        return acc + el.sodium;
-      }, 0) +
-      dinner.reduce((acc, el) => {
-        return acc + el.sodium;
-      }, 0) +
-      snacks.reduce((acc, el) => {
-        return acc + el.sodium;
-      }, 0),
-
-    sugar:
-      breakfast.reduce((acc, el) => {
-        return acc + el.sugar;
-      }, 0) +
-      lunch.reduce((acc, el) => {
-        return acc + el.sugar;
-      }, 0) +
-      dinner.reduce((acc, el) => {
-        return acc + el.sugar;
-      }, 0) +
-      snacks.reduce((acc, el) => {
-        return acc + el.sugar;
-      }, 0),
+        return acc + el[nutrient];
+      }, 0)
+    );
   };
 
-//   console.log(total);
+  const total = {
+    calories: calTotal("calories"),
+    carbs: calTotal("carbs"),
+    fat: calTotal("fat"),
+    protein: calTotal("protein"),
+    sodium: calTotal("sodium"),
+    sugar: calTotal("sugar"),
+  };
+
+  const remaining = {
+    calories: dailyGoal.calories - total.calories,
+    carbs: dailyGoal.carbs - total.carbs,
+    fat: dailyGoal.fat - total.fat,
+    protein: dailyGoal.protein - total.protein,
+    sodium: dailyGoal.sodium - total.sodium,
+    sugar: dailyGoal.sugar - total.sugar,
+  };
 
   return (
     <table className={styles.Table}>
@@ -130,14 +98,14 @@ export default function TotalTable({ breakfast, lunch, dinner, snacks }) {
           <td>{dailyGoal.sodium}</td>
           <td>{dailyGoal.sugar}</td>
         </tr>
-        <tr>
+        <tr style={{ color: isEatingEnough ? "red" : "green" }}>
           <td>Remaining</td>
-          <td>{dailyGoal.calories - total.calories}</td>
-          <td>{dailyGoal.carbs - total.carbs}</td>
-          <td>{dailyGoal.fat - total.fat}</td>
-          <td>{dailyGoal.protein - total.protein}</td>
-          <td>{dailyGoal.sodium - total.sodium}</td>
-          <td>{dailyGoal.sugar - total.sugar}</td>
+          <td>{remaining.calories}</td>
+          <td>{remaining.carbs}</td>
+          <td>{remaining.fat}</td>
+          <td>{remaining.protein}</td>
+          <td>{remaining.sodium}</td>
+          <td>{remaining.sugar}</td>
         </tr>
       </tbody>
     </table>

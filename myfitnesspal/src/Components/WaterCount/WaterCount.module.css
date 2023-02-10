@@ -1,0 +1,65 @@
+.waterDiv {
+    width: 80%;
+    margin: 30px auto;
+    border: 1px solid grey;
+    padding: 20px;
+    display: flex;
+}
+
+.waterLeft {
+    width: 55%;
+    border-right: 1px solid grey;
+}
+
+.leftUpper {
+    display: flex;
+}
+
+.waterLeft h4 {
+    margin: 10px 0px 5px;
+}
+
+.quickAddBtn {
+    background-color: white;
+    color: rgb(0, 84, 143);
+    margin-right: 10px;
+    border: none;
+}
+
+.quickAddBtn:hover {
+    text-decoration: underline;
+    color: orange;
+    cursor: pointer;
+}
+
+.waterLeft input {
+    width: 80px;
+    padding: 7px;
+}
+
+.waterRight {
+    padding-left: 20px;
+}
+
+.waterRight>h4 {
+    margin-bottom: 10px;
+}
+
+.waterRight textarea {
+    padding: 10px;
+    width: 90%;
+}
+
+.greenBtn {
+    background-color: rgb(81, 163, 81);
+    margin: 0px 20px;
+    padding: 8px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.greenBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px green;
+}

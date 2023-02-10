@@ -1,13 +1,11 @@
-import { useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import Table from "../../Components/Table/Table";
 import TotalTable from "../../Components/TotalTable/TotalTable";
 import styles from "./Food.module.css";
-import {
-  addWaterThunkActionCreator,
-  saveNotesThunkActionCreator,
-} from "../../Redux/action";
 import { useReactToPrint } from "react-to-print";
+import CompleteEntry from "../../Components/CompleteEntry/CompleteEntry";
+import WaterCount from "../../Components/WaterCount/WaterCount";
 
 export default function Food() {
   const storeData = useSelector((data) => {
@@ -15,11 +13,8 @@ export default function Food() {
   });
   console.log(storeData);
 
-  const waterRef = useRef();
-  const notesRef = useRef();
+  const [isEatingEnough, setIsEatingEnough] = useState(false);
   const printRef = useRef();
-
-  const dispatch = useDispatch();
 
   const handlePrint = useReactToPrint({
     documentTitle: "new doc",
@@ -28,17 +23,6 @@ export default function Food() {
       return printRef.current;
     },
   });
-
-  const addWaterCups = (cups) => {
-    // console.log(cups);
-    dispatch(addWaterThunkActionCreator(cups));
-  };
-
-  const saveNotes = () => {
-    // console.log(notesRef.current.value);
-    const notes = notesRef.current.value;
-    dispatch(saveNotesThunkActionCreator(notes));
-  };
 
   return (
     <div className={styles.Food} ref={printRef}>
@@ -65,99 +49,19 @@ export default function Food() {
             lunch={storeData.Lunch}
             dinner={storeData.Dinner}
             snacks={storeData.Snacks}
+            isEatingEnough={isEatingEnough}
+            setIsEatingEnough={setIsEatingEnough}
           />
         </div>
-        <div className={styles.waterDiv}>
-          <div className={styles.waterLeft}>
-            <div>
-              <h3 style={{ color: "rgb(0,84,143)", marginBottom: "10px" }}>
-                Water Consumption
-              </h3>
-              <h4>Today's Water Total</h4>
-              <p style={{ fontSize: "small" }}>
-                Aim to drink at least 8 cups of water today. You can quick add
-                common sizes or enter a custom amount.{" "}
-              </p>
-              <h4>Quick Add</h4>
-              <button
-                className={styles.quickAddBtn}
-                onClick={() => {
-                  addWaterCups(1);
-                }}
-              >
-                +1 cup
-              </button>
-              <button
-                className={styles.quickAddBtn}
-                onClick={() => {
-                  addWaterCups(2);
-                }}
-              >
-                +2 cups
-              </button>
-              <button
-                className={styles.quickAddBtn}
-                onClick={() => {
-                  addWaterCups(4);
-                }}
-              >
-                +4 cups
-              </button>
-              <h4>Add Custom</h4>
-              <input type="number" ref={waterRef} /> &nbsp;
-              <span>cups</span>
-              <button
-                onClick={() => {
-                  addWaterCups(+waterRef.current.value);
-                }}
-              >
-                Add
-              </button>
-            </div>
-            <div>
-              <h4 style={{ textAlign: "center", marginBottom: "30px" }}>
-                {storeData.water_consumed} cups
-              </h4>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1864/1864846.png"
-                alt="water-glass"
-                height="100px"
-              />
-            </div>
-          </div>
+        <CompleteEntry isEatingEnough={isEatingEnough} />
 
-          <div className={styles.waterRight}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginBottom: "10px",
-              }}
-            >
-              <h4>Today's Food Notes</h4>
-              <button
-                style={{
-                  backgroundColor: "white",
-                  color: "blue",
-                  textDecoration: "underline",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-                onClick={saveNotes}
-              >
-                Save
-              </button>
-            </div>
-            <textarea
-              cols="30"
-              rows="10"
-              ref={notesRef}
-              defaultValue={storeData.food_notes}
-            ></textarea>
-          </div>
-        </div>
-        <button onClick={handlePrint} id={styles.printBtn}>View Full Report (Printable)</button>
+        <WaterCount />
+
+        <button onClick={handlePrint} id={styles.printBtn}>
+          View Full Report (Printable)
+        </button>
       </div>
+
       <div className={styles.sideDiv}>
         <img
           src="https://tpc.googlesyndication.com/simgad/17903055369230987743"
