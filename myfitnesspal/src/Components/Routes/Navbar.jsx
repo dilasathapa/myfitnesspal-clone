@@ -12,6 +12,7 @@ function Navbar() {
     <div className="navbar" style={navStyle}>
       <Link to="/">Home</Link>
       <Link to="/food">Food</Link>
+      <Link to="/exercise">Exercise</Link>
     </div>
   );
 }

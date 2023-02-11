@@ -120,5 +120,61 @@
       "sodium": 15,
       "sugar": 10
     }
+  ],
+  "cardio-workouts": [
+    {
+      "id": 1,
+      "title": "jumping jacks",
+      "minutes": 2,
+      "calories_burned": 18
+    },
+    {
+      "id": 2,
+      "title": "jogging",
+      "minutes": 5,
+      "calories_burned": 85
+    },
+    {
+      "id": 3,
+      "title": "stretching",
+      "minutes": 5,
+      "calories_burned": 13
+    },
+    {
+      "id": 4,
+      "title": "plank",
+      "minutes": 2,
+      "calories_burned": 6
+    }
+  ],
+  "strength-workouts": [
+    {
+      "id": 1,
+      "title": "sit ups",
+      "sets": 2,
+      "reps": 10,
+      "weight": "NA"
+    },
+    {
+      "id": 2,
+      "title": "push ups",
+      "sets": 2,
+      "reps": 10,
+      "weight": "NA"
+    },
+    {
+      "id": 3,
+      "title": "crunches",
+      "sets": 2,
+      "reps": 10,
+      "weight": "NA"
+    },
+    {
+      "id": 4,
+      "title": "pull ups",
+      "sets": 2,
+      "reps": 5,
+      "weight": "NA"
+    }
   ]
 }

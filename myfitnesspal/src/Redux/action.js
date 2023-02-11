@@ -1,4 +1,4 @@
-import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES } from "./actionTypes"
+import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES, ADD_TO_CARDIO, ADD_TO_STRENGTH_TRAINING, REMOVE_FROM_CARDIO, REMOVE_FROM_STRENGTH_TRAINING, SAVE_EXERCISE_NOTES } from "./actionTypes"
 
 
 export const addFoodThunkActionCreator = (meal, item) => {
@@ -74,5 +74,43 @@ export const saveNotesThunkActionCreator = (payload) => {
             type: SAVE_FOOD_NOTES,
             payload,
         })
+    }
+}
+
+export const addExerciseThunkActionCreator = (type, data) => {
+    return (dispatch, getState) => {
+        let actionObj = {};
+        switch (type) {
+            case "cardio": actionObj = {
+                type: ADD_TO_CARDIO,
+                payload: data,
+            }
+                break;
+            case "strength": actionObj = {
+                type: ADD_TO_STRENGTH_TRAINING,
+                payload: data,
+            }
+                break;
+        }
+        dispatch(actionObj);
+    }
+}
+
+export const removeExerciseThunkActionCreator = (type, id) => {
+    return (dispatch, getState) => {
+        let actionObj = {};
+        switch (type) {
+            case "cardio": actionObj = {
+                type: REMOVE_FROM_CARDIO,
+                payload: id,
+            }
+                break;
+            case "strength": actionObj = {
+                type: REMOVE_FROM_STRENGTH_TRAINING,
+                payload: id,
+            }
+                break;
+        }
+        dispatch(actionObj);
     }
 }

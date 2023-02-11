@@ -1,4 +1,4 @@
-import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES } from "./actionTypes"
+import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES, ADD_TO_CARDIO, ADD_TO_STRENGTH_TRAINING, REMOVE_FROM_CARDIO, REMOVE_FROM_STRENGTH_TRAINING, SAVE_EXERCISE_NOTES } from "./actionTypes"
 
 const initialState = {
     Breakfast: [],
@@ -7,6 +7,9 @@ const initialState = {
     Snacks: [],
     water_consumed: 0,
     food_notes: "",
+    cardio: [],
+    strength_training: [],
+    exercise_notes: "",
 };
 
 function reducer(state = initialState, { type, payload }) {
@@ -59,6 +62,28 @@ function reducer(state = initialState, { type, payload }) {
             ...state,
             food_notes: payload,
         }
+        case ADD_TO_CARDIO: return {
+            ...state,
+            cardio: [...state.cardio, payload],
+        }
+        case ADD_TO_STRENGTH_TRAINING: return {
+            ...state,
+            strength_training: [...state.strength_training, payload],
+        }
+        case REMOVE_FROM_CARDIO:
+            return {
+                ...state,
+                cardio: state.cardio.filter((el) => {
+                    return el.id !== payload;
+                })
+            }
+        case REMOVE_FROM_STRENGTH_TRAINING:
+            return {
+                ...state,
+                strength_training: state.strength_training.filter((el) => {
+                    return el.id !== payload;
+                })
+            }
 
         default: return state;
     }

@@ -6,6 +6,7 @@ import styles from "./Food.module.css";
 import { useReactToPrint } from "react-to-print";
 import CompleteEntry from "../../Components/CompleteEntry/CompleteEntry";
 import WaterCount from "../../Components/WaterCount/WaterCount";
+import { Link } from "react-router-dom";
 
 export default function Food() {
   const storeData = useSelector((data) => {
@@ -16,13 +17,13 @@ export default function Food() {
   const [isEatingEnough, setIsEatingEnough] = useState(false);
   const printRef = useRef();
 
-  const handlePrint = useReactToPrint({
-    documentTitle: "new doc",
-    pageStyle: "print",
-    content: () => {
-      return printRef.current;
-    },
-  });
+  // const handlePrint = useReactToPrint({
+  //   documentTitle: "new doc",
+  //   pageStyle: "print",
+  //   content: () => {
+  //     return printRef.current;
+  //   },
+  // });
 
   return (
     <div className={styles.Food} ref={printRef}>
@@ -57,8 +58,8 @@ export default function Food() {
 
         <WaterCount />
 
-        <button onClick={handlePrint} id={styles.printBtn}>
-          View Full Report (Printable)
+        <button className={styles.greenBtn}>
+          <Link to="/reports">View Full Report (Printable)</Link>
         </button>
       </div>
 
