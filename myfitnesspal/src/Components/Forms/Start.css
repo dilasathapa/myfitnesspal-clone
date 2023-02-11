@@ -24,21 +24,24 @@
     margin-bottom: 50px;
 }
 
-#continue-button{
-    background-color: rgb(0, 102, 238);
-    padding: 18px 150px;
-    margin-right: 10px;
-    margin-left: 10px;
-    border: None;
-    border-radius: 4px;
-    letter-spacing: 0.015625rem;
-    color: rgb(255, 255, 255);
+#continues button{
+    font-size: 1rem;
     font-weight: 700;
-    font-size: 16px;
-    font-family: Inter, Helvetica, Arial, -apple-system, sans-serif;
-    align-items: center;
-    justify-content: center;
-    text-decoration:none;
+    text-transform: uppercase;
+    margin-right: 16px;
+    box-sizing: inherit;
+    text-decoration: none;
+    border: 2px solid rgb(0, 102, 238);
+    color: white;
+    background-color: rgb(0, 102, 238) ;
+    border-radius: 4px;
+    max-width: 281px;
+    padding: 0px 50px;
+}
+
+#continues button:hover{
+    background-color: #1943cf ;
+    border: 2px solid #1943cf;
 }
 
 #mainDiv-top{
@@ -116,5 +119,15 @@
     height: 56px;
     max-width: 181px;
     padding: 0px 50px;
+}
+
+#nextbtn button:hover{
+    background-color: #1943cf ;
+    border: 2px solid #1943cf;
+}
+
+#backbtn button:hover{
+    background-color: #f4f7ff ;
+    border: 2px solid #1943cf;
 }
 
