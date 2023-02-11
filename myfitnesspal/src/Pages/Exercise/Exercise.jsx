@@ -110,6 +110,9 @@ export default function Exercise() {
             </tbody>
           </table>
         </div>
+        <button className={styles.reportBtn}>
+          <Link to="/reports">View Full Report (Printable)</Link>
+        </button>
       </div>
       <div className={styles.sideDiv}>
         <img

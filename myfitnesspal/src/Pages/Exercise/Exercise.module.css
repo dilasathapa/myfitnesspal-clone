@@ -47,7 +47,7 @@
 }
 
 .itemRow {
-    background-color: rgb(246,246,246);
+    background-color: rgb(246, 246, 246);
     border-bottom: 1px solid lightgray;
     font-size: 13px;
 }
@@ -68,3 +68,8 @@
     text-decoration: underline;
 }
 
+.reportBtn {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+}

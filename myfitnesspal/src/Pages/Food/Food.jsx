@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import Table from "../../Components/Table/Table";
 import TotalTable from "../../Components/TotalTable/TotalTable";
 import styles from "./Food.module.css";
-import { useReactToPrint } from "react-to-print";
 import CompleteEntry from "../../Components/CompleteEntry/CompleteEntry";
 import WaterCount from "../../Components/WaterCount/WaterCount";
 import { Link } from "react-router-dom";
@@ -15,18 +14,9 @@ export default function Food() {
   console.log(storeData);
 
   const [isEatingEnough, setIsEatingEnough] = useState(false);
-  const printRef = useRef();
-
-  // const handlePrint = useReactToPrint({
-  //   documentTitle: "new doc",
-  //   pageStyle: "print",
-  //   content: () => {
-  //     return printRef.current;
-  //   },
-  // });
-
+  
   return (
-    <div className={styles.Food} ref={printRef}>
+    <div className={styles.Food}>
       <div className={styles.mainDiv}>
         <div className={styles.topAd}>
           <img
@@ -58,7 +48,7 @@ export default function Food() {
 
         <WaterCount />
 
-        <button className={styles.greenBtn}>
+        <button className={styles.reportBtn}>
           <Link to="/reports">View Full Report (Printable)</Link>
         </button>
       </div>

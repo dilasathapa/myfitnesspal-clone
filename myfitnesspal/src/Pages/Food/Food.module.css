@@ -24,7 +24,8 @@
     border-radius: 5px;
 }
 
-#printBtn:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px green;
+.reportBtn {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
 }
