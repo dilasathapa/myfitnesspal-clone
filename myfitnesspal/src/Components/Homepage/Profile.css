@@ -37,18 +37,18 @@
 }
 #details>p:nth-child(1){
     margin-top: 2%;
-    font-weight: 100;
+    /* font-weight: 100; */
     font-size: medium;
     color: red;
 }
 #details>p:nth-child(2){
     margin-top: 2%;
-    font-weight: 100;
+    /* font-weight: 100; */
     font-size: medium;
 }
 #details > p:nth-child(3){
     margin-top: 2%;
-    font-weight: 100;
+    /* font-weight: 100; */
     font-size: medium;
 }
 .edit-profile{
@@ -60,7 +60,7 @@
     background-color: rgb(0,102,238);
     border-radius: 4px;
     font-size: large;
-    font-weight: 100;
+    /* font-weight: 100; */
 }
 .edit-photo{
     height: 50px;
@@ -71,7 +71,7 @@
     font-size: large;
     background-color: rgb(0,102,238);
     border-radius: 4px;
-    font-weight: 100;
+    /* font-weight: 100; */
 } 
 #bottom-info{
     display: flex;
@@ -81,7 +81,7 @@
 #bottom-info > div:nth-child(1) > h3{
     color:rgb(0,102,238); 
     margin-top: 8%;
-    font-weight: 100;
+    /* font-weight: 100; */
     
 }
 #bottom-info > div:nth-child(1) > p{
@@ -110,7 +110,7 @@ font-size: small;
     /* text-align: center; */
     padding: 10px;
     padding-left: 3%;
-    font-weight: 100;
+    /* font-weight: 100; */
 }
 #textarea{
     width: 70%;

@@ -20,7 +20,9 @@ export default function Home() {
             </div>
             <div id='calculator'>
               <div className='upload-img'>
-
+                <p>No photo</p>
+                <p>provided</p>
+                <h4>Upload Photo</h4>
               </div>
               <div className='calculations'>
                 <div id='calculations-top'>
@@ -68,7 +70,9 @@ export default function Home() {
               </div>
             </div>
             <div id='confirm-mail'>
-              <div>icon</div>
+              <div>
+               <img src="https://seeklogo.com/images/M/mail-icon-logo-28FE0635D0-seeklogo.com.png" alt="img-mail" />
+              </div>
               <div>
                 <h3>Don't forget to verify your email.</h3>
                 <p>We sent an email to : </p>
