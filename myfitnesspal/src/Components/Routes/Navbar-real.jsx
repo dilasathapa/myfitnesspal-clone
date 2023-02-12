@@ -19,12 +19,13 @@ function NavbarChange() {
                         <p>Hi, <span>name</span></p>
                         <FaUser className="fauser" />
                         <FaEnvelope className="faenvelope" />
+                        
                         <p>Help</p>
-                        <p></p>
+                        <p>|</p>
                         <p>Settings</p>
-                        <p></p>
+                        <p>|</p>
                         <p>Log Out</p>
-                        <p></p>
+                        <p>|</p>
                         <p>Follow Us: </p>
                         <FaFacebookSquare className="fafacebook" />
                         <FaTwitter className="fatwitter" />

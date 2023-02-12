@@ -10,7 +10,7 @@
 
 #two-bars {
     display: flex;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     margin: 0 15%;
     margin-top: 30px;
     /* gap: 3%; */
@@ -18,13 +18,13 @@
 }
 
 #left-bar {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     margin: 2%;
     width: 70%;
 }
 
 #right-bar {
-    border: 1px solid rgb(75, 9, 75);
+    /* border: 1px solid rgb(75, 9, 75); */
     width: 25%;
     margin: 2% 2% 2% 0;
 }
@@ -39,6 +39,7 @@
     padding: 4px;
     padding-left: 20px;
     padding-right: 20px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
 }
 
 #top-header>div {
@@ -59,7 +60,7 @@
 }
 
 #calculator {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     height: 200px;
     display: flex;
     background-color: rgb(246, 246, 246);
@@ -99,7 +100,7 @@
 }
 
 .calculations {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 75%;
     margin: 2% 1% 2% 2%;
 }
@@ -108,7 +109,7 @@
     display: flex;
     /* justify-content: space-between; */
     gap: 20%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     
 }
 
@@ -117,18 +118,18 @@
     color: rgb(133, 196, 0);
     height: 60px;
     font-size: xxx-large;
-    font-weight: 400;
+    font-weight: 500;
 }
 #calculations-top>div:nth-child(2){
     display: flex;
     gap: 20px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     /* margin-right: 20px ; */
     width: 50%;
     
 }
 #calculations-top>div:nth-child(2)>button:nth-child(1) {
-    height: 32px;
+    height: 40px;
     width: 60%;
     border: none;
     margin-top: 20px;
@@ -147,13 +148,13 @@
     color: #fff;
 }
 #calculations-top>div:nth-child(2)>button:nth-child(2) {
-    height: 30px;
+    height: 40px;
     width: 40%;
-   background-color: red;
-    background-color: #fff;
-    border: 2px solid red;
-    /* border: none; */
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+    /* border: 2px solid red; */
+    background-color:  rgb(10, 82, 130); 
+    color:#fff;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     margin-top: 20px;
     border-radius: 4px;
     
@@ -161,35 +162,50 @@
     /* color: #fff;  */
 
 }
+#calculations-top>div:nth-child(2)>button:nth-child(2):hover{
+    /* background-color:  rgb(10, 82, 130); */
+    background-color: orange;
+    color: #fff;
+}
 
-#calculations-top>div:nth-child(2)>button:nth-child(2) {
+/* #calculations-top>div:nth-child(2)>button:nth-child(2) {
     height: 30px;
     background-color: #fff;
-}
+} */
 
 #calculations-bottom {
     display: flex;
+    margin-top: 20px;
 }
 
 #calculations-bottom>div:nth-child(1) {
-    width: 22%;
+    width: 8%;
 }
 
 #calculations-bottom>div:nth-child(2) {
-    width: 22%;
+    width: 10%;
 }
 
 #calculations-bottom>div:nth-child(3) {
-    width: 22%;
+    width: 12%;
 }
 
 #calculations-bottom>div:nth-child(4) {
-    width: 22%;
+    width: 8%;
 }
+#calculations-bottom>div:nth-child(5){
+    width: 20%;
+}
+#calculations-bottom>div:nth-child(6){
+    width: 12%;
+}
+
 
 #scroll-bar {
     display: flex;
     background-color: rgb(246, 246, 246);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
 }
 
 #lbs-gained {
@@ -210,10 +226,11 @@
 }
 
 #confirm-mail {
-    margin-top: 3%;
+    margin-top: 5%;
     background-color: rgb(246, 246, 246);
     display: flex;
-    border: 2px solid blue;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    /* border: 2px solid blue; */
 }
 
 #confirm-mail>div:nth-child(1) {
@@ -229,7 +246,7 @@
 
 #confirm-mail>div:nth-child(2) {
     width: 70%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #confirm-mail>div:nth-child(2)>h3 {
@@ -268,6 +285,11 @@
     margin-top: 10%;
     margin-bottom: 8%;
     margin-left: 15%;
+    cursor: pointer;
+
+}
+#confirm-mail>div:nth-child(3)>button:hover{
+    background-color: orange;
 }
 
 #confirm-mail>div:nth-child(3)>p {
@@ -282,9 +304,10 @@
 }
 
 #news-feed {
-    border: 2px solid red;
-    margin-top: 3%;
+    /* border: 2px solid red; */
+    margin-top: 5%;
     background-color: rgb(246, 246, 246);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 #news-feed>div:nth-child(1)>h3 {
@@ -300,11 +323,12 @@
 
 #textarea {
     width: 75%;
-    margin: 3% 0 2% 3%;
+    margin: 3% 0 3% 3%;
 }
 
 #news-feed>div:nth-child(2) {
     display: flex;
+    padding-bottom: 3%;
 }
 
 #news-feed>div:nth-child(2)>div>button {
@@ -317,6 +341,7 @@
     border-radius: 3px;
     color: #fff;
     background-color: rgb(0, 102, 238);
+    cursor: pointer;
     /* padding-left: 20%;  */
 }
 
@@ -355,6 +380,7 @@
     padding: 4px;
     margin-left: 2px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 #right-bar>div:nth-child(2)>div>h1>sup {

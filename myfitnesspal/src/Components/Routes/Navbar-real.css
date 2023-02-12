@@ -3,12 +3,12 @@
     font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
 }
 #navbar-parent{
-    border: 4px solid red;
+    /* border: 4px solid red; */
     /* display: flex; */
     height: 70px;
 }
 #navbar-header{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     justify-content: space-between;
     margin: 0 15%;
@@ -23,41 +23,75 @@
     align-items: center;
     text-align: center;
     padding-top: 13px;
+    cursor: pointer;
 }
 #img-myfitnesspal>h1>sup{
     font-size: x-small;
 }
 #navbar-topmost-header{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: space-around;
     gap: 10px;
+    /* font-size: xx-large; */
     align-items: center;
 }
+
 #navbar-topmost-header >p:nth-child(1) > span{
     color: rgb(0,102,238);
+    cursor: pointer;
 }
 .fauser{
     color: gray;
+    /* color: rgb(166, 24, 24); */
+    cursor: pointer;
+   
+}
+.fauser:hover{
+    color: orange;
 }
 .faenvelope{
     color: gray;
+    cursor: pointer;
 }
+.faenvelope:hover{
+    color: orange;
+}
+/* #navbar-topmost-header >p:nth-child(3){
+    width: 3px;
+    color: gray;
+} */
 #navbar-topmost-header >p:nth-child(4){
     color: rgb(0,102,238);
+    font-size: medium;
+    cursor: pointer;
 }
 
 #navbar-topmost-header >p:nth-child(6){
     color: rgb(0,102,238);
+    font-size: medium;
+    cursor: pointer;
 }
 #navbar-topmost-header >p:nth-child(8){
     color: rgb(0,102,238);
+    font-size: medium;
+    cursor: pointer;
 }
 .fafacebook{
     color: rgb(0,102,238);
+    font-size: x-large;
+    cursor: pointer;
+}
+.fafacebook:hover{
+    color: orange;
 }
 .fatwitter{
     color: rgb(0,102,238);
+    font-size: x-large;
+    cursor: pointer;
+}
+.fatwitter:hover{
+    color: orange;
 }
 #navigations{
     /* border: 2px solid green; */
