@@ -65,6 +65,35 @@ export default function Reports() {
     setShow(checkboxValues);
   };
 
+  const calTotalFood = (key) => {
+    return (
+      breakfast.reduce((acc, el) => {
+        return acc + el[key];
+      }, 0) +
+      lunch.reduce((acc, el) => {
+        return acc + el[key];
+      }, 0) +
+      dinner.reduce((acc, el) => {
+        return acc + el[key];
+      }, 0) +
+      snacks.reduce((acc, el) => {
+        return acc + el[key];
+      }, 0)
+    );
+  };
+
+  const calTotalCardio = (key) => {
+    return cardio.reduce((acc, el) => {
+      return acc + el[key];
+    }, 0);
+  };
+
+  const calTotalStrengthTraining = (key) => {
+    return strengthTraining.reduce((acc, el) => {
+      return acc + el[key];
+    }, 0);
+  };
+
   return (
     <div className={styles.Reports} ref={printRef}>
       <div className={styles.desc}>
@@ -75,8 +104,8 @@ export default function Reports() {
             including daily notes.
           </p>
         </div>
+        <p style={{textAlign:"left"}}>Show: </p>
         <div className={styles.showDiv}>
-          <p>Show: </p>
           <div className={styles.checkDiv}>
             <div>
               <input
@@ -207,6 +236,17 @@ export default function Reports() {
                   </tr>
                 );
               })}
+              <tr>
+                <td style={{ textAlign: "right" }}>
+                  <b>TOTALS</b>
+                </td>
+                <td>{calTotalFood("calories")}</td>
+                <td>{calTotalFood("carbs")}</td>
+                <td>{calTotalFood("fat")}</td>
+                <td>{calTotalFood("protein")}</td>
+                <td>{calTotalFood("sodium")}</td>
+                <td>{calTotalFood("sugar")}</td>
+              </tr>
             </tbody>
           </table>
         )}
@@ -261,6 +301,16 @@ export default function Reports() {
                   </tr>
                 );
               })}
+              <tr>
+                <td style={{ textAlign: "right" }}>
+                  <b>TOTALS</b>
+                </td>
+                <td>{calTotalCardio("calories_burned")}</td>
+                <td>{calTotalCardio("minutes")}</td>
+                <td>{calTotalStrengthTraining("sets")}</td>
+                <td>{calTotalStrengthTraining("reps")}</td>
+                <td>{calTotalStrengthTraining("weight")}</td>
+              </tr>
             </tbody>
           </table>
         )}

@@ -1,21 +1,21 @@
 .Reports {
-    text-align: center;
     width: 70%;
     margin: auto;
 }
 
 .desc {
-    /* border: 2px solid blue; */
     width: 70%;
     margin: 30px auto;
 }
 
 .foodReport {
     margin: 50px auto;
+    text-align: center;
 }
 
 .exerciseReport {
     margin: 50px auto;
+    text-align: center;
 }
 
 .reportsTable {
@@ -57,10 +57,12 @@
 
 .showDiv {
     text-align: left;
+    display: flex;
+    gap: 100px;
+    align-items: center;
 }
 
 .checkDiv {
-    /* border: 1px solid blue; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
