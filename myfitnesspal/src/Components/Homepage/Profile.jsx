@@ -10,7 +10,15 @@ function Profile() {
                     <div id="info">
 
                         <div id="show-side">
-                            <img src="" alt="" />
+                            {/* <img src="" alt="" /> */}
+                            <div>
+                                <div id="user-img">
+                                    <p>No Photo</p>
+                                    <p>provided</p>
+                                    <input type="file" />
+                                    <button>Upload photo</button>
+                                </div>
+                            </div>
                             <div id="details">
                                 <p>name</p>
                                 <p>gender</p>

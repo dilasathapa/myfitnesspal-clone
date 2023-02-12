@@ -39,16 +39,21 @@ export default function Home() {
                   <div>
                     <p>1400</p>
                     <p>GOAL</p>
-                    <p></p>
+
                   </div>
+                  <div><p></p></div>
                   <div>
                     <p>0</p>
                     <p>FOOD</p>
+
                   </div>
+                  <div><p>-</p></div>
                   <div>
                     <p>0</p>
                     <p>EXCERCISE</p>
+
                   </div>
+                  <div><p>=</p></div>
                   <div>
                     <p>0</p>
                     <p>NET</p>
@@ -66,12 +71,19 @@ export default function Home() {
                 <div id='clipboard-icon'>icon</div>
 
               </div>
-              <div id='bar'>
-              </div>
+              <div id="bar"></div>
+              {/* <div id='bar'
+                class="progress-bar progress-bar-striped progress-bar-animated"
+                role="progressbar"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style={{ width: "25%" }}>
+              </div> */}
             </div>
             <div id='confirm-mail'>
               <div>
-               <img src="https://seeklogo.com/images/M/mail-icon-logo-28FE0635D0-seeklogo.com.png" alt="img-mail" />
+                <img src="https://seeklogo.com/images/M/mail-icon-logo-28FE0635D0-seeklogo.com.png" alt="img-mail" />
               </div>
               <div>
                 <h3>Don't forget to verify your email.</h3>
