@@ -10,6 +10,7 @@ const initialState = {
     cardio: [],
     strength_training: [],
     exercise_notes: "",
+    isLogin: false,
 };
 
 function reducer(state = initialState, { type, payload }) {
@@ -61,6 +62,10 @@ function reducer(state = initialState, { type, payload }) {
         case SAVE_FOOD_NOTES: return {
             ...state,
             food_notes: payload,
+        }
+        case SAVE_EXERCISE_NOTES: return {
+            ...state,
+            exercise_notes: payload,
         }
         case ADD_TO_CARDIO: return {
             ...state,

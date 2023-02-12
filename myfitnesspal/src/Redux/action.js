@@ -114,3 +114,12 @@ export const removeExerciseThunkActionCreator = (type, id) => {
         dispatch(actionObj);
     }
 }
+ 
+export const saveExerciseNotesThunkActionCreator=(payload)=>{
+    return (dispatch, getState) => {
+        dispatch({
+            type: SAVE_EXERCISE_NOTES,
+            payload,
+        })
+    }
+}

@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 import "./Landing.css"
 
 function Header (){
+
+  
+
+
+
+
   return (
     <div className="Landing_header">
       <img src="https://seekvectorlogo.com/wp-content/uploads/2022/02/myfitnesspal-vector-logo-2022.png" style={{height:"90px"}}/>

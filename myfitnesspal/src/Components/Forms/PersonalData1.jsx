@@ -102,6 +102,9 @@ function PersonaData2() {
 }
 
 function Login() {
+  // const loginUser =()=>{
+
+  // }
   return (
     <div>
       <div id='head'>
@@ -115,7 +118,8 @@ function Login() {
           <br/><br/>
           <p>By signing up for MyFitnessPal, you are agreeing to our Privacy Policy and Terms.</p>
           <div id='loginbtn'>
-          <Link id='continue' to='/username'><button>CONTINUE</button></Link>
+          <Link id='continue'  to='/username'><button 
+          >CONTINUE</button></Link>
           </div>
           <p id='alt-text'>or</p>
           <div id='alt-loginbtn'>
