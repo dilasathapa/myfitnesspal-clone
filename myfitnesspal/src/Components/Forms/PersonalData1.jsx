@@ -6,21 +6,20 @@ import "./personalData.css";
 import Landing from "../Landing/Landing";
 import CountrySelect from "./Country";
 import { useDispatch } from "react-redux";
+import { loginUserThunkActionCreator } from "../../Redux/action";
 
 const GenderSelect = () => {
-  const [selectedGender, setSelectedGender] = useState("male");
+  // const [selectedGender, setSelectedGender] = useState("");
 
-  const handleChange = (event) => {
-    setSelectedGender(event.target.value);
+  const handleChange = (e) => {
+    // setSelectedGender(event.target.value);
+    let selectedGender = e.target.value;
+    localStorage.setItem("gender", selectedGender);
   };
 
   return (
-    <select
-      id="g_select"
-      value={selectedGender}
-      onChange={handleChange}
-      placeholder="Select Gender"
-    >
+    <select id="g_select" onChange={handleChange} placeholder="Select Gender">
+      <option value="">Select Gender</option>
       <option value="male">Male</option>
       <option value="female">Female</option>
     </select>
@@ -78,13 +77,7 @@ function PersonaData1() {
             <button>BACK</button>
           </Link>
           <Link id="nextbtn" to="/personadata2">
-            <button
-              onClick={() => {
-                localStorage.setItem("gender", selectedGender);
-              }}
-            >
-              NEXT
-            </button>
+            <button>NEXT</button>
           </Link>
         </div>
       </div>
@@ -136,7 +129,6 @@ function PersonaData2() {
 }
 
 function Login() {
-  const dispatch = useDispatch();
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
@@ -149,26 +141,9 @@ function Login() {
     });
   };
 
-  const registerUser = () => {
-    const newUser = {
-      name: localStorage.getItem("name") || "dummy",
-      gender: localStorage.getItem("gender") || "male",
-      email: loginData.email,
-      password: loginData.password,
-    };
-
-    fetch(`https://localhost:8080/users`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
-    .then((res)=> res.json())
-    .then((data)=>{
-      console.log("new user registered");
-      // dispatchEvent()
-    })
+  const saveUserData = () => {
+    localStorage.setItem("email", loginData.email);
+    localStorage.setItem("password", loginData.password);
   };
 
   return (
@@ -201,7 +176,7 @@ function Login() {
           </p>
           <div id="loginbtn">
             <Link id="continue" to="/username">
-              <button onClick={registerUser}>CONTINUE</button>
+              <button onClick={saveUserData}>CONTINUE</button>
             </Link>
           </div>
           <p id="alt-text">or</p>
@@ -243,6 +218,16 @@ function Username() {
 }
 
 function Calorie() {
+  const dispatch = useDispatch();
+  const loginUser = () => {
+    const newUser = {
+      name: localStorage.getItem("name") || " ",
+      gender: localStorage.getItem("gender") || " ",
+      email: localStorage.getItem("email") || " ",
+      password: localStorage.getItem("password") || " ",
+    };
+    dispatch(loginUserThunkActionCreator(newUser));
+  };
   return (
     <div>
       <div id="head">
@@ -260,7 +245,7 @@ function Calorie() {
         <br />
         <div>
           <Link id="explorebtn" to="/home">
-            <button>EXPLORE MYFITNESSPAL</button>
+            <button onClick={loginUser}>EXPLORE MYFITNESSPAL</button>
           </Link>
         </div>
       </div>
