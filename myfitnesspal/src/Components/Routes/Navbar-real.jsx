@@ -12,14 +12,14 @@ function NavbarChange() {
         <>
             <div id="navbar-parent">
                 <div id="navbar-header">
-                    <div id="img-myfitnesspal">
+                    <div id="img-myfitnesspal"> 
                         <h1>myfitnesspal <sup>TM</sup> </h1>
                     </div>
                     <div id="navbar-topmost-header">
                         <p>Hi, <span>name</span></p>
                         <FaUser className="fauser" />
                         <FaEnvelope className="faenvelope" />
-                        
+
                         <p>Help</p>
                         <p>|</p>
                         <p>Settings</p>

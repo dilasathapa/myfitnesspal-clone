@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css";
+import { FaClipboardList } from "react-icons/fa";
 
 
 export default function Home() {
@@ -68,7 +69,7 @@ export default function Home() {
                   <p><span>0</span> lbs </p>
                   <p>GAINED</p>
                 </div>
-                <div id='clipboard-icon'>icon</div>
+                <div id='clipboard-icon'><FaClipboardList className='clip-icon'/></div>
 
               </div>
               <div id="bar"></div>
