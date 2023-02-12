@@ -1,4 +1,4 @@
-import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES, ADD_TO_CARDIO, ADD_TO_STRENGTH_TRAINING, REMOVE_FROM_CARDIO, REMOVE_FROM_STRENGTH_TRAINING, SAVE_EXERCISE_NOTES } from "./actionTypes"
+import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES, ADD_TO_CARDIO, ADD_TO_STRENGTH_TRAINING, REMOVE_FROM_CARDIO, REMOVE_FROM_STRENGTH_TRAINING, SAVE_EXERCISE_NOTES, LOGIN_USER, LOGOUT_USER } from "./actionTypes"
 
 
 export const addFoodThunkActionCreator = (meal, item) => {
@@ -114,12 +114,29 @@ export const removeExerciseThunkActionCreator = (type, id) => {
         dispatch(actionObj);
     }
 }
- 
-export const saveExerciseNotesThunkActionCreator=(payload)=>{
+
+export const saveExerciseNotesThunkActionCreator = (payload) => {
     return (dispatch, getState) => {
         dispatch({
             type: SAVE_EXERCISE_NOTES,
             payload,
+        })
+    }
+}
+
+export const loginUserThunkActionCreator = (userDetails) => {
+    return (dispatch, getState) => {
+        dispatch({
+            type: LOGIN_USER,
+            payload: userDetails,
+        })
+    }
+}
+
+export const logoutUserThunkActionCreator = ()=>{
+    return (dispatch, getState) => {
+        dispatch({
+            type: LOGOUT_USER,
         })
     }
 }

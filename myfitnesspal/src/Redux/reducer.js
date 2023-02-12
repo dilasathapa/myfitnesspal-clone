@@ -1,4 +1,4 @@
-import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES, ADD_TO_CARDIO, ADD_TO_STRENGTH_TRAINING, REMOVE_FROM_CARDIO, REMOVE_FROM_STRENGTH_TRAINING, SAVE_EXERCISE_NOTES } from "./actionTypes"
+import { ADD_TO_BREAKFAST, ADD_TO_DINNER, ADD_TO_LUNCH, ADD_TO_SNACKS, REMOVE_FROM_BREAKFAST, REMOVE_FROM_DINNER, REMOVE_FROM_LUNCH, REMOVE_FROM_SNACKS, ADD_WATER_CUPS, SAVE_FOOD_NOTES, ADD_TO_CARDIO, ADD_TO_STRENGTH_TRAINING, REMOVE_FROM_CARDIO, REMOVE_FROM_STRENGTH_TRAINING, SAVE_EXERCISE_NOTES, LOGIN_USER, LOGOUT_USER } from "./actionTypes"
 
 const initialState = {
     Breakfast: [],
@@ -10,7 +10,10 @@ const initialState = {
     cardio: [],
     strength_training: [],
     exercise_notes: "",
-    isLogin: false,
+    auth: {
+        isLogin: false,
+        userDetails: {},
+    }
 };
 
 function reducer(state = initialState, { type, payload }) {
@@ -88,6 +91,16 @@ function reducer(state = initialState, { type, payload }) {
                 strength_training: state.strength_training.filter((el) => {
                     return el.id !== payload;
                 })
+            }
+        case LOGIN_USER:
+            return {
+                ...state,
+                auth: { isLogin: true, userDetails: payload },
+            }
+        case LOGOUT_USER:
+            return {
+                ...state,
+                auth: { isLogin: false, userDetails: "" },
             }
 
         default: return state;
