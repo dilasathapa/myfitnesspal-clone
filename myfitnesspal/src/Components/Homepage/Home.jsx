@@ -72,8 +72,10 @@ export default function Home() {
                     <h1>1400</h1>
                   </div>
                   <div>
-                    <button>Add Excercise</button>
-                    <button>Add Food</button>
+                    
+                    <button><Link to="/exercise" style={{textDecoration:"none", color:"white"}}>Add Excercise</Link></button>
+                    
+                    <button><Link to="/food" style={{textDecoration:"none", color:"white"}}>Add Food</Link></button>
                   </div>
                 </div>
                 <div id="calculations-bottom">
@@ -99,7 +101,7 @@ export default function Home() {
                     <p>=</p>
                   </div>
                   <div>
-                    <p>{calTotalCalories - calTotalBurned}</p>
+                    <p>{calTotalCalories() - calTotalBurned()}</p>
                     <p>NET</p>
                   </div>
                 </div>
