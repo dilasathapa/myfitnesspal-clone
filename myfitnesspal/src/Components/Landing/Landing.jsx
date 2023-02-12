@@ -2,24 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css"
 
-var startButton = {
-    backgroundColor: "rgb(0, 102, 238)",
-    padding: "12px 40px",
-    marginRight: "10px",
-    marginLeft: "10px",
-    border: "None",
-    borderRadius: "4px",
-    letterSpacing: "0.015625rem",
-    color: "rgb(255, 255, 255)",
-    fontWeight: "500",
-    fontSize: "0.9375rem",
-    fontFamily: "Inter, Helvetica, Arial, -apple-system, sans-serif",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-    textDecoration:"none",
-}
-
 function Header (){
   return (
     <div className="Landing_header">
@@ -28,6 +10,7 @@ function Header (){
     </div>
   )
 }
+export {Header};
 
 function Landing(props) {
   return (
@@ -78,15 +61,7 @@ function Landing(props) {
         <h1>Victory Stories</h1>
         <p>Every day, more than 3,000 members reach their goals with MyFitnessPal. Get inspired for the journey ahead.</p>
       </div>
-      <div className="slider" style={{}}>
-        <div>
-          <img src="https://www.myfitnesspal.com/_next/image?url=%2Fpages%2Fhome%2Fvictory-story-1.jpg&w=1920&q=75"/>
-          <div>
-            <h3>Education helped her lose 30 pounds.</h3>
-            <p>MyFitnessPal gave me a wake up call to the way I was eating and made things clear what I needed to change.</p>
-          </div>
-        </div>
-      </div>
+      
 
       <div className="mid_btn">
         <Link className="mid_startbtn" to='/start'>START YOUR JOURNEY</Link>
@@ -191,3 +166,4 @@ const fin = {
   textDecoration: "none",
   color: "#0066EE"
 }
+

@@ -131,3 +131,26 @@
     border: 2px solid #1943cf;
 }
 
+#continue{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 16px;
+    height: 56px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 102, 238) ;
+    border-radius: 4px;
+    height: 56px;
+    width: 430px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+#continue:hover{
+    background-color: #1943cf;
+}
+
