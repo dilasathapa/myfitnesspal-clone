@@ -1,9 +1,37 @@
 import React from 'react'
 import "./Home.css";
 import { FaClipboardList } from "react-icons/fa";
+import {Link} from "react-router-dom"
+import {useSelector} from "react-redux"
 
 
 export default function Home() {
+  const breakfast = useSelector((data)=>{
+    return (
+      data.Breakfast
+      
+    )
+  })
+  const lunch = useSelector((data)=>{
+    return (      
+      data.Lunch    
+    )
+  })
+  const dinner = useSelector((data)=>{
+    return (
+      data.Dinner
+    )
+  })
+  const snacks = useSelector((data)=>{
+    return (      
+      data.Snacks
+    )
+  })
+  const cardio=useSelector((data)=>{
+    return (
+      data.cardio
+    )
+  })
   return (
     <>
       <div className='parent'>
@@ -146,7 +174,59 @@ export default function Home() {
 
           </div>
         </div>
+        <div className="footStyle">
+      <div className = "navbar" style={{marginBottom:"10px"}}>
+            <Link style={lin} to='/about'>ABOUT</Link>
+            <Link style={lin} to='/food'>FOOD</Link>
+            <Link style={lin} to='/exercise'>EXERCISE</Link>
+            <Link style={lin} to='/apps'>APPS</Link>
+            <Link style={lin} to='/community'>COMMUNITY</Link>
+            <Link style={lin} to='/blog'>BLOG</Link>            
+            <Link style={lin} to='/premium'>PREMIUM</Link>            
+        </div>
+        <div>
+          <Link style={fin} to='/calorie'>Calorie Counter</Link>
+          <Link style={fin} to='/blog'>Blog</Link>
+          <Link style={fin} to='/terms'>Terms</Link>
+          <Link style={fin} to='/privacy'>Privacy</Link>
+          <Link style={fin} to='/contact'>Contact Us</Link>
+          <Link style={fin} to='/api'>API</Link>
+          <Link style={fin} to='/jobs'>Jobs</Link>
+          <Link style={fin} to='/feedback'>Feedback</Link>
+          <Link style={fin} to='/community'>Community Guidelines</Link>
+        </div>
+        <div>
+          <Link style={fin} to='/cookie'>Cookie Preferences</Link>
+          <Link style={fin} to='/ad'>Ad Choices</Link>
+          <Link style={fin} to='/personalinfo'>Do Not Sell My Personal Information</Link>
+        </div>
+        <div>
+          <p style={{fontSize: "11px" , paddingBottom:"10px"}}>© 2023 MyFitnessPal, Inc.</p>
+          {/* <br/> */}
+        </div>
       </div>
+    </div>    
     </>
   )
+}
+
+const lin = {
+  textDecoration: "none",
+  marginRight: "10px",
+  padding:"0px 16px",
+  fontWeight: "700",
+  color: "black"
+}
+
+
+
+
+
+const fin = {
+  marginRight: "10px",
+  fontSize: "11px",
+  padding:"2px 2px",
+  lineHeight: "18px",
+  textDecoration: "none",
+  color: "#0066EE"
 }
