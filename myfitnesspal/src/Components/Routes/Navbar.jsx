@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { Link } from "react-router-dom";
 
 const navStyle = {
@@ -8,13 +8,16 @@ const navStyle = {
 };
 
 function Navbar() {
-  return (
-    <div className="navbar" style={navStyle}>
-      <Link to="/">Home</Link>
-      <Link to="/food">Food</Link>
-      <Link to="/exercise">Exercise</Link>
-    </div>
-  );
+    return(
+        <div className = "navbar" >
+            <Link to='/'>Landing Home</Link>
+            <Link to='/login'>Login</Link>
+            <Link to='/home'>Home</Link>
+            <Link to='/profile'>Profile</Link>
+            <Link to='/food'>Food</Link>
+            <Link to='/blog'>Blog</Link>            
+        </div>
+    )
 }
 
 export default Navbar;

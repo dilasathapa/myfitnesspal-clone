@@ -1,0 +1,49 @@
+
+#head{
+    display: flex;
+    height: 75px;
+    justify-content: left;
+    /* // boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px" */
+    margin-bottom: 50px;
+    margin-left: 400px;
+}
+
+#goal-opt {
+    display: grid;
+    gap: 5px;
+    /* width: 80%;
+    margin: auto; */
+}
+
+#goal_heading p{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: Inter, Helvetica, Arial, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 1.5;
+}
+
+#goal-opt button{
+    border: 2px solid rgb(188, 188, 192);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    margin: 2px 0px;
+    padding: 14px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 5px;
+}
+
+#mainDivG {
+    width: 25%;
+    margin: auto;
+    padding: 30px;
+    height: 650px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-Radius: 15px;
+    text-align: center;
+    /* border: 1px solid gray; */
+}

@@ -6,20 +6,29 @@ import Food from "../../Pages/Food/Food";
 import Reports from "../../Pages/Reports/Reports";
 import Exercise from "../../Pages/Exercise/Exercise";
 import AddExercise from "../../Pages/AddExercise/AddExercise";
+import Landing from "../Landing/Landing";
 
-const AllRoutes = () => {
-  return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/food" element={<Food />} />
-        <Route path="/add_food" element={<AddFood />} />
-        <Route path="/exercise" element={<Exercise />} />
-        <Route path="/add_exercise" element={<AddExercise />} />
-        <Route path="/reports" element={<Reports />} />
-      </Routes>
-    </div>
-  );
-};
+import Profile from "../Homepage/Profile";
+
+
+import Start from "../Forms/Start";
+import Name from "../Forms/Name";
+import Goals from "../Forms/Goals";
+import Steps from "../Forms/Steps";
+import Statments from "../Forms/Statement";
+import { Stress,Baseline } from "../Forms/Statement";
+import { PersonaData1, PersonaData2,Login,Username } from "../Forms/PersonalData1";
+import { Calorie } from "../Forms/PersonalData1";
+import { NavbarChange } from "./Navbar-real";
+
+const AllRoutes = () =>{
+    return (
+        <div>
+            <Routes>
+                <Route path='/home' element={<Home />}></Route>
+            </Routes>
+        </div>
+    ) 
+}
 
 export default AllRoutes;
