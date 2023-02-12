@@ -59,6 +59,11 @@
     font-weight: 500;
 }
 
+.clip-icon {
+    color: gray;
+    font-size: xxx-large;
+}
+
 #calculator {
     /* border: 2px solid green; */
     height: 200px;
@@ -90,9 +95,11 @@
     text-align: center;
     margin-top: 50px;
 }
-.upload-img>h4:hover{
+
+.upload-img>h4:hover {
     color: orange;
 }
+
 .upload-img:hover {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -110,7 +117,7 @@
     /* justify-content: space-between; */
     gap: 20%;
     /* border: 1px solid black; */
-    
+
 }
 
 #calculations-top>div>h1 {
@@ -118,16 +125,18 @@
     color: rgb(133, 196, 0);
     height: 60px;
     font-size: xxx-large;
-    font-weight: 500;
+    /* font-weight: 500; */
 }
-#calculations-top>div:nth-child(2){
+
+#calculations-top>div:nth-child(2) {
     display: flex;
     gap: 20px;
     /* border: 1px solid blue; */
     /* margin-right: 20px ; */
     width: 50%;
-    
+
 }
+
 #calculations-top>div:nth-child(2)>button:nth-child(1) {
     height: 40px;
     width: 60%;
@@ -135,34 +144,37 @@
     margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 4px;
-    background-color:  rgb(10, 82, 130); 
+    background-color: rgb(10, 82, 130);
     cursor: pointer;
     color: #fff;
-   
+
     /* padding: px; */
     /* height: px; */
 }
-#calculations-top>div:nth-child(2)>button:nth-child(1):hover{
+
+#calculations-top>div:nth-child(2)>button:nth-child(1):hover {
     /* background-color:  rgb(10, 82, 130); */
     background-color: orange;
     color: #fff;
 }
+
 #calculations-top>div:nth-child(2)>button:nth-child(2) {
     height: 40px;
     width: 40%;
     /* border: 2px solid red; */
-    background-color:  rgb(10, 82, 130); 
-    color:#fff;
+    background-color: rgb(10, 82, 130);
+    color: #fff;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     margin-top: 20px;
     border-radius: 4px;
-    
+
     cursor: pointer;
     /* color: #fff;  */
 
 }
-#calculations-top>div:nth-child(2)>button:nth-child(2):hover{
+
+#calculations-top>div:nth-child(2)>button:nth-child(2):hover {
     /* background-color:  rgb(10, 82, 130); */
     background-color: orange;
     color: #fff;
@@ -193,10 +205,12 @@
 #calculations-bottom>div:nth-child(4) {
     width: 8%;
 }
-#calculations-bottom>div:nth-child(5){
+
+#calculations-bottom>div:nth-child(5) {
     width: 20%;
 }
-#calculations-bottom>div:nth-child(6){
+
+#calculations-bottom>div:nth-child(6) {
     width: 12%;
 }
 
@@ -238,10 +252,16 @@
     width: 15%;
     max-width: 2% 1% 2% 2%;
     margin: 4% 2%;
-    
+
 }
-#confirm-mail>div:nth-child(1) > img{
+
+#confirm-mail>div:nth-child(1)>img {
     height: 100px;
+}
+#lbs-gained >div:nth-child(1)>p:nth-child(1)>span{
+    color: rgb(133, 196, 0);
+    font-weight: 700;
+    font-size: large;
 }
 
 #confirm-mail>div:nth-child(2) {
@@ -288,7 +308,8 @@
     cursor: pointer;
 
 }
-#confirm-mail>div:nth-child(3)>button:hover{
+
+#confirm-mail>div:nth-child(3)>button:hover {
     background-color: orange;
 }
 
@@ -439,4 +460,278 @@
     margin-top: 3%;
     /* font-weight: 100; */
     font-size: medium;
+}
+
+/* 
+@media (max-width : 900px) {
+    .parent{
+   margin: auto;
+    width: 140%;
+    margin-left: -20%;
+    margin-right: -40%;
+    }
+} */
+@media (max-width : 768px) {
+    #two-bars {
+        margin: 0;
+        width: 100%;
+    }
+
+
+    #left-bar {
+        width: 65%;
+    }
+
+    #calculator {
+        height: 170px;
+    }
+
+    .upload-img>h4 {
+        margin-top: 15px;
+    }
+
+    #calculations-top>div:nth-child(2) {
+        margin-right: 10px;
+        gap: 10px;
+        width: 70%;
+    }
+
+    /* element.style {
+    width: 50%;
+} */
+    #calculations-top>div:nth-child(2)>button:nth-child(1) {
+        width: 50%;
+    }
+
+    #confirm-mail>div:nth-child(1)>img {
+        height: 80px;
+        margin-top: 20px;
+    }
+
+    #confirm-mail>div:nth-child(2)>h3 {
+        font-size: medium;
+        margin-top: 40px;
+    }
+
+    element.style {
+        width: 70%;
+    }
+
+    #confirm-mail>div:nth-child(3)>button {
+        width: 70%;
+        font-size: smaller;
+    }
+
+
+    #confirm-mail>div:nth-child(3)>button {
+        /* font-size: large; */
+        margin-top: 40px;
+    }
+
+    #right-bar>div:nth-child(2)>div>h1 {
+        font-size: x-large;
+        margin-top: 30px;
+    }
+
+    #right-bar>div:nth-child(2)>div>h1>sup {
+        margin-top: 30px;
+        font-size: small;
+    }
+
+    #right-bar>div:nth-child(2)>div>button {
+        height: 20px;
+        font-size: x-small;
+
+    }
+
+    #right-bar>div:nth-child(2)>div:nth-child(2)>p:nth-child(1) {
+        font-size: smaller;
+    }
+
+    #right-bar>div:nth-child(2)>div:nth-child(2)>p:nth-child(3) {
+        font-size: medium;
+    }
+
+    #right-bar>div:nth-child(2)>div:nth-child(2)>p:nth-child(4) {
+        font-size: smaller;
+    }
+
+    #right-bar>div:nth-child(2)>div:nth-child(2)>p:nth-child(7) {
+        font-size: small;
+    }
+
+    #right-bar>div:nth-child(2)>div:nth-child(2)>p:nth-child(10) {
+        font-size: small;
+    }
+}
+
+@media (max-width : 320px) {
+    #top-header>h2 {
+        font-size: inherit;
+    }
+
+    #two-bars {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-bar {
+        width: 90%;
+        font-size: unset;
+        margin: 1% auto;
+    }
+
+    .calculations {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 50px;
+    }
+
+    #calculator {
+        /* display: flex;
+        flex-direction: column; */
+        width: 100%;
+        height: 350px;
+    }
+
+    .upload-img {
+        width: 50%;
+        font-size: smaller;
+        height: 120px;
+    }
+
+    #calculations-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #calculations-top>div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #calculations-top>div:nth-child(2)>button:nth-child(1) {
+        width: 100%;
+        margin-top: 20px;
+        /* height: 40px; */
+        margin-left: 15px;
+    }
+
+    #calculations-top>div:nth-child(2)>button:nth-child(2) {
+        width: 100%;
+        margin-top: 2px;
+        margin-left: 15px;
+    }
+
+    #scroll-bar {
+        display: flex;
+        flex-direction: column;
+        margin-top: -60px;
+
+    }
+
+    #lbs-gained {
+        margin-top: -140px;
+        font-size: smaller;
+    }
+
+    .clip-icon {
+        font-size: xx-large;
+        margin-left: 20px;
+    }
+
+    #calculations-bottom {
+        display: flex;
+        flex-direction: row;
+        /* width: 200%; */
+        margin-left: -110px;
+        gap: 6px;
+        font-size: small;
+    }
+
+    #bar {
+        margin-top: 90px;
+        width: 90%;
+    }
+
+    #confirm-mail {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    #confirm-mail>div:nth-child(2) {
+        width: 100%;
+        text-align: center;
+    }
+
+    #confirm-mail>div:nth-child(1)>img {
+        margin: 10px 0 0 100px;
+    }
+
+    #confirm-mail>div:nth-child(2)>h3 {
+        margin-top: 5px;
+        font-size: medium;
+        /* width: 120%; */
+        /* margin-left: 15px; */
+        text-align: center;
+    }
+
+    #confirm-mail>div:nth-child(2)>p:nth-child(2) p {
+        /* margin-left: 15px; */
+        text-align: center;
+    }
+
+    #confirm-mail>div:nth-child(3)>button {
+        height: 50px;
+        margin-top: 15px;
+    }
+
+    #confirm-mail>div:nth-child(3)>p {
+        margin-top: -2px;
+    }
+
+    #news-feed>div:nth-child(1)>h3 {
+        font-size: inherit;
+    }
+
+    #news-feed>div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #textarea {
+        /* /* width: 500px;  */
+        padding-right: 50px;
+
+        margin: 1% auto;
+    }
+
+    #news-feed>div:nth-child(2)>div>button {
+        width: 50%;
+        margin: 2% 0 0 25%;
+    }
+
+    #right-bar {
+        width: 100%;
+    }
+
+    #right-bar>div:nth-child(1) {
+        margin-top: 20px;
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    #right-bar>div:nth-child(2) {
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    #news-feed {
+        margin-top: 10%;
+    }
+    #right-bar>div:nth-child(2)>div>h1{
+        font-size: xx-large;
+    }
 }

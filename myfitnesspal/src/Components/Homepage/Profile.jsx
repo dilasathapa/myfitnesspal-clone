@@ -15,7 +15,7 @@ function Profile() {
                                 <div id="user-img">
                                     <p>No Photo</p>
                                     <p>provided</p>
-                                    <input type="file" />
+                                    <input type="file"/>
                                     <button>Upload photo</button>
                                 </div>
                             </div>
