@@ -1,0 +1,39 @@
+.completeEntryDiv {
+    text-align: center;
+    margin: 50px;
+}
+
+.completeEntryDiv button {
+    margin: 20px 0px;
+}
+
+.detailsDiv {
+    text-align: left;
+}
+
+.redText {
+    color: red;
+}
+
+.greenText {
+    color: green;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+
+.greenBtn {
+    background-color: rgb(81, 163, 81);
+    margin: 0px 20px;
+    padding: 8px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.greenBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px green;
+}

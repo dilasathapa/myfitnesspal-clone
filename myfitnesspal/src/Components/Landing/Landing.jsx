@@ -10,7 +10,7 @@ function Header (){
     </div>
   )
 }
-export {Header};
+
 
 function Landing(props) {
   return (

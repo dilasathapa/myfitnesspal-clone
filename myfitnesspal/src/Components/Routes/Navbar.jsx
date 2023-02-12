@@ -1,6 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
+const navStyle = {
+  display: "flex",
+  justifyContent: "center",
+  gap: "50px",
+};
+
 function Navbar() {
     return(
         <div className = "navbar" >
@@ -14,4 +20,4 @@ function Navbar() {
     )
 }
 
-export { Navbar }
+export default Navbar;
