@@ -11,6 +11,7 @@ const GenderSelect = () => {
   const [selectedGender, setSelectedGender] = useState("male");
 
   const handleChange = (event) => {
+    localStorage.setItem("gender", selectedGender);
     setSelectedGender(event.target.value);
   };
 
@@ -79,9 +80,7 @@ function PersonaData1() {
           </Link>
           <Link id="nextbtn" to="/personadata2">
             <button
-              onClick={() => {
-                localStorage.setItem("gender", selectedGender);
-              }}
+              
             >
               NEXT
             </button>
