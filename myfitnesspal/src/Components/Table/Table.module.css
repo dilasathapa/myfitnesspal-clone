@@ -1,0 +1,53 @@
+.Table {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.Table th {
+    background-color: rgb(0, 84, 143);
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.Table>thead>tr>th:first-child {
+    width: 50%;
+    text-align: left;
+    background-color: white;
+    color: rgb(0, 84, 143);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Table td {
+    text-align: center;
+    padding: 5px;
+}
+
+.Table td:first-child {
+    text-align: left;
+}
+
+.itemRow {
+    background-color: rgb(246,246,246);
+    border-bottom: 1px solid lightgray;
+    font-size: 13px;
+}
+
+.mealTotalRow {
+    color: rgb(0, 84, 143);
+    font-size: 15px;
+}
+
+.mealTotalRow button {
+    border: none;
+    background-color: white;
+    color: rgb(0, 84, 143);
+}
+
+.mealTotalRow button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -1,0 +1,180 @@
+{
+  "food-items": [
+    {
+      "id": 1,
+      "item": "almonds",
+      "calories": 164,
+      "carbs": 6,
+      "fat": 14,
+      "protein": 6,
+      "sodium": 0,
+      "sugar": 1
+    },
+    {
+      "id": 2,
+      "item": "apple",
+      "calories": 104,
+      "carbs": 28,
+      "fat": 0,
+      "protein": 1,
+      "sodium": 2,
+      "sugar": 21
+    },
+    {
+      "id": 3,
+      "item": "banana",
+      "calories": 105,
+      "carbs": 27,
+      "fat": 0,
+      "protein": 1,
+      "sodium": 1,
+      "sugar": 14
+    },
+    {
+      "id": 4,
+      "item": "poha",
+      "calories": 330,
+      "carbs": 69,
+      "fat": 6,
+      "protein": 7,
+      "sodium": 420,
+      "sugar": 2
+    },
+    {
+      "id": 5,
+      "item": "rice",
+      "calories": 121,
+      "carbs": 27,
+      "fat": 0,
+      "protein": 2,
+      "sodium": 0,
+      "sugar": 0
+    },
+    {
+      "id": 6,
+      "item": "dal",
+      "calories": 100,
+      "carbs": 26,
+      "fat": 3,
+      "protein": 10,
+      "sodium": 30,
+      "sugar": 0
+    },
+    {
+      "id": 7,
+      "item": "cooked vegetables",
+      "calories": 45,
+      "carbs": 1,
+      "fat": 5,
+      "protein": 1,
+      "sodium": 140,
+      "sugar": 0
+    },
+    {
+      "id": 8,
+      "item": "chapati",
+      "calories": 72,
+      "carbs": 15,
+      "fat": 0,
+      "protein": 3,
+      "sodium": 190,
+      "sugar": 0
+    },
+    {
+      "id": 9,
+      "item": "paneer curry",
+      "calories": 108,
+      "carbs": 6,
+      "fat": 7,
+      "protein": 5,
+      "sodium": 0,
+      "sugar": 5
+    },
+    {
+      "id": 10,
+      "item": "sweets",
+      "calories": 340,
+      "carbs": 61,
+      "fat": 0,
+      "protein": 4,
+      "sodium": 0,
+      "sugar": 0
+    },
+    {
+      "id": 11,
+      "item": "tea",
+      "calories": 50,
+      "carbs": 0,
+      "fat": 1,
+      "protein": 1,
+      "sodium": 0,
+      "sugar": 0
+    },
+    {
+      "id": 12,
+      "item": "biscuits",
+      "calories": 160,
+      "carbs": 19,
+      "fat": 8,
+      "protein": 3,
+      "sodium": 15,
+      "sugar": 10
+    }
+  ],
+  "cardio-workouts": [
+    {
+      "id": 1,
+      "title": "jumping jacks",
+      "minutes": 2,
+      "calories_burned": 18
+    },
+    {
+      "id": 2,
+      "title": "jogging",
+      "minutes": 5,
+      "calories_burned": 85
+    },
+    {
+      "id": 3,
+      "title": "stretching",
+      "minutes": 5,
+      "calories_burned": 13
+    },
+    {
+      "id": 4,
+      "title": "plank",
+      "minutes": 2,
+      "calories_burned": 6
+    }
+  ],
+  "strength-workouts": [
+    {
+      "id": 1,
+      "title": "sit ups",
+      "sets": 2,
+      "reps": 10,
+      "weight": "NA"
+    },
+    {
+      "id": 2,
+      "title": "push ups",
+      "sets": 2,
+      "reps": 10,
+      "weight": "NA"
+    },
+    {
+      "id": 3,
+      "title": "crunches",
+      "sets": 2,
+      "reps": 10,
+      "weight": "NA"
+    },
+    {
+      "id": 4,
+      "title": "pull ups",
+      "sets": 2,
+      "reps": 5,
+      "weight": "NA"
+    }
+  ]
+}

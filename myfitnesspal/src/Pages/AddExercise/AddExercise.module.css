@@ -1,0 +1,77 @@
+.AddExercise {
+    width: 70%;
+    margin: 50px auto;
+    /* border: 2px solid black; */
+    padding: 0px 20px;
+}
+
+.AddExercise img {
+    display: block;
+    margin: auto;
+}
+
+.heading {
+    margin: 20px 0px 10px;
+    color: rgb(0, 84, 143);
+}
+
+.centerDiv {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+.searchDiv {
+    margin: 20px 0px;
+}
+
+#searchBox {
+    padding: 10px;
+    width: 400px;
+    margin: 5px 0px;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    background-color: rgb(81, 163, 81);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+}
+
+.tableDiv>table {
+    width: 100%;
+    background-color: rgb(246, 246, 246);
+    border-collapse: collapse;
+    margin: 10px 0px;
+}
+
+.tableDiv td {
+    border: 2px solid white;
+    padding: 5px;
+}
+
+
+.mainDiv {
+    /* border: 2px solid red; */
+    position: relative;
+    width: 80%;
+}
+
+.bottomAd {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.bottomAd img {
+    width: 100%;
+}
+
+#searchResultDiv {
+    background-color: rgb(200, 198, 198);
+    padding: 5px;
+    margin-top: -5px;
+}

@@ -1,0 +1,19 @@
+.Table {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.Table td {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    background-color: rgb(246, 246, 246);
+}
+
+.Table td:first-child {
+    width: 50%;
+    text-align: right;
+    background-color: white;
+}

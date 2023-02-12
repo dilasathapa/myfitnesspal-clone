@@ -1,0 +1,31 @@
+.Food {
+    width: 75%;
+    margin: 20px auto 50px;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainDiv {
+    width: 80%;
+}
+
+.ads {
+    width: 100%;
+}
+
+#printBtn {
+    display: block;
+    margin: auto;
+    background-color: rgb(81, 163, 81);
+    padding: 8px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.reportBtn {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+}
