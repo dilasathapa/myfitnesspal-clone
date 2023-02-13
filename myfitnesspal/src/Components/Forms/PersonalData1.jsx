@@ -142,6 +142,9 @@ function Login() {
   };
 
   const saveUserData = () => {
+    console.log(loginData.email);
+    console.log(loginData.password);
+
     localStorage.setItem("email", loginData.email);
     localStorage.setItem("password", loginData.password);
   };
@@ -160,11 +163,13 @@ function Login() {
           <h3>Almost there! Create your account.</h3>
           <input
             type={"text"}
+            name="email"
             placeholder="Email address"
             onChange={changeData}
           />
           <input
             type={"password"}
+            name="password"
             placeholder="Create a password"
             onChange={changeData}
           />
@@ -220,6 +225,7 @@ function Username() {
 function Calorie() {
   const dispatch = useDispatch();
   const loginUser = () => {
+    localStorage.setItem("login", JSON.stringify(true));
     const newUser = {
       name: localStorage.getItem("name") || " ",
       gender: localStorage.getItem("gender") || " ",
