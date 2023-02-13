@@ -3,7 +3,7 @@ import "./Home.css";
 import { FaClipboardList } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import "./../Routes/Navbar.css"
+import "./../Routes/Navbar.css";
 
 export default function Home() {
   const breakfast = useSelector((data) => {
@@ -20,6 +20,10 @@ export default function Home() {
   });
   const cardio = useSelector((data) => {
     return data.cardio;
+  });
+
+  const auth = useSelector((data) => {
+    return data.auth;
   });
 
   const calTotalCalories = () => {
@@ -50,15 +54,37 @@ export default function Home() {
       <div className="parent">
         <div id="navbar-bottom">
           <div id="navbar-bottom-section">
-            <button> <Link id="link-color">Home</Link> </button>
-            <button> <Link id="link-color">Goals</Link> </button>
-            <button> <Link id="link-color">Check-In</Link> </button>
-            <button> <Link id="link-color">Mail</Link> </button>
-            <button> <Link id="link-color" to="/profile">Profile</Link> </button>
-            <button> <Link id="link-color">Friends</Link> </button>
-            <button> <Link id="link-color">Settings</Link> </button>
+            <button>
+              {" "}
+              <Link id="link-color">Home</Link>{" "}
+            </button>
+            <button>
+              {" "}
+              <Link id="link-color">Goals</Link>{" "}
+            </button>
+            <button>
+              {" "}
+              <Link id="link-color">Check-In</Link>{" "}
+            </button>
+            <button>
+              {" "}
+              <Link id="link-color">Mail</Link>{" "}
+            </button>
+            <button>
+              {" "}
+              <Link id="link-color" to="/profile">
+                Profile
+              </Link>{" "}
+            </button>
+            <button>
+              {" "}
+              <Link id="link-color">Friends</Link>{" "}
+            </button>
+            <button>
+              {" "}
+              <Link id="link-color">Settings</Link>{" "}
+            </button>
           </div>
-
         </div>
         <div id="two-bars">
           <div id="left-bar">
@@ -76,7 +102,11 @@ export default function Home() {
               <div className="upload-img">
                 <p>No photo</p>
                 <p>provided</p>
-                <h4><Link to='/profile'  style={{textDecoration:"none"}}>Upload Photo</Link></h4>
+                <h4>
+                  <Link to="/profile" style={{ textDecoration: "none" }}>
+                    Upload Photo
+                  </Link>
+                </h4>
               </div>
               <div className="calculations">
                 <div id="calculations-top">
@@ -85,10 +115,23 @@ export default function Home() {
                     <h1>2860</h1>
                   </div>
                   <div>
+                    <button>
+                      <Link
+                        to="/exercise"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Add Excercise
+                      </Link>
+                    </button>
 
-                    <button><Link to="/exercise" style={{ textDecoration: "none", color: "white" }}>Add Excercise</Link></button>
-
-                    <button><Link to="/food" style={{ textDecoration: "none", color: "white" }}>Add Food</Link></button>
+                    <button>
+                      <Link
+                        to="/food"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Add Food
+                      </Link>
+                    </button>
                   </div>
                 </div>
                 <div id="calculations-bottom">
@@ -133,10 +176,15 @@ export default function Home() {
                 </div>
               </div>
               <div id="bar">
-              {/* <input type="range" style={{color}}/> */}
-              <progress id="progress" max="100" value="80" style={{height:"30px", accentColor:"rgb(133,196,0)"}}></progress>
+                {/* <input type="range" style={{color}}/> */}
+                <progress
+                  id="progress"
+                  max="100"
+                  value="80"
+                  style={{ height: "30px", accentColor: "rgb(133,196,0)" }}
+                ></progress>
               </div>
-             
+
               {/* <div id='bar'
                 class="progress-bar progress-bar-striped progress-bar-animated"
                 role="progressbar"
@@ -156,7 +204,7 @@ export default function Home() {
               <div>
                 <h3>Don't forget to verify your email.</h3>
                 <p>We sent an email to : </p>
-                <p>example@gmail.com</p>
+                <p>{auth.userDetails.email}</p>
               </div>
               <div>
                 <button>RESEND EMAIL</button>
