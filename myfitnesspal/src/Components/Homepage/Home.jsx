@@ -3,6 +3,7 @@ import "./Home.css";
 import { FaClipboardList } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./../Routes/Navbar.css"
 
 export default function Home() {
   const breakfast = useSelector((data) => {
@@ -47,6 +48,18 @@ export default function Home() {
   return (
     <>
       <div className="parent">
+        <div id="navbar-bottom">
+          <div id="navbar-bottom-section">
+            <button> <Link id="link-color">Home</Link> </button>
+            <button> <Link id="link-color">Goals</Link> </button>
+            <button> <Link id="link-color">Check-In</Link> </button>
+            <button> <Link id="link-color">Mail</Link> </button>
+            <button> <Link id="link-color">Profile</Link> </button>
+            <button> <Link id="link-color">Friends</Link> </button>
+            <button> <Link id="link-color">Settings</Link> </button>
+          </div>
+
+        </div>
         <div id="two-bars">
           <div id="left-bar">
             <div id="top-header">
@@ -72,10 +85,10 @@ export default function Home() {
                     <h1>1400</h1>
                   </div>
                   <div>
-                    
-                    <button><Link to="/exercise" style={{textDecoration:"none", color:"white"}}>Add Excercise</Link></button>
-                    
-                    <button><Link to="/food" style={{textDecoration:"none", color:"white"}}>Add Food</Link></button>
+
+                    <button><Link to="/exercise" style={{ textDecoration: "none", color: "white" }}>Add Excercise</Link></button>
+
+                    <button><Link to="/food" style={{ textDecoration: "none", color: "white" }}>Add Food</Link></button>
                   </div>
                 </div>
                 <div id="calculations-bottom">
