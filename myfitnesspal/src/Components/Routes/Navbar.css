@@ -143,3 +143,13 @@
     border: none;
     font-weight: 100;
 }
+@media (max-width: "768px"){
+    #navbar-bottom{
+        width: 70%;
+    margin: 50px auto;
+    }
+    #navbar-bottom-section{
+        margin: 0;
+        /* width: ; */
+    }
+}

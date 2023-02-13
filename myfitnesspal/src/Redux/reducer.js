@@ -11,7 +11,7 @@ const initialState = {
     strength_training: [],
     exercise_notes: "",
     auth: {
-        isLogin: false,
+        isLogin: JSON.parse(localStorage.getItem("login")) || false,
         userDetails: {
             name: "",
             gender: "",

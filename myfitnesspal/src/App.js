@@ -2,8 +2,6 @@ import { useSelector } from 'react-redux';
 import './App.css';
 import AllRoutes from './Components/Routes/AllRoutes';
 import { Navbar } from './Components/Routes/Navbar';
-// import Navbar from './Components/Routes/Navbar';
-
 
 
 function App() {

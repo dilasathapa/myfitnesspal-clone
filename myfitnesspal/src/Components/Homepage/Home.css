@@ -119,6 +119,9 @@
     /* border: 1px solid black; */
 
 }
+#progress{
+    width: 100%;
+}
 
 #calculations-top>div>h1 {
     /* color: green; */
@@ -233,7 +236,7 @@
 
 } */
 #bar {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     height: 20px;
     width: 70%;
     margin: 0 1% 2% 2%;
@@ -356,7 +359,7 @@
     /* width: 40%; */
     /* border: 1px solid ; */
     border: none;
-    margin: 40% 3% 2% 50%;
+    margin: 60% 3% 2% 50%;
     height: 40px;
     width: 200%;
     border-radius: 3px;
@@ -384,7 +387,7 @@
 
 #right-bar div:nth-child(1)>ul {
     margin-top: 5%;
-
+margin-left: 5%;
     color: rgb(25, 121, 243);
     font-size: small;
     /* font-weight: 100; */
@@ -473,7 +476,7 @@
 } */
 @media (max-width : 768px) {
     #two-bars {
-        margin: 0;
+        margin: 2% auto;
         width: 100%;
     }
 
@@ -494,6 +497,9 @@
         margin-right: 10px;
         gap: 10px;
         width: 70%;
+    }
+    #progress{
+        width: 100%;
     }
 
     /* element.style {
@@ -562,6 +568,11 @@
 
     #right-bar>div:nth-child(2)>div:nth-child(2)>p:nth-child(10) {
         font-size: small;
+    }
+    
+    .footStyle{
+        width: 70%;
+        margin: auto;
     }
 }
 
@@ -734,4 +745,8 @@
     #right-bar>div:nth-child(2)>div>h1{
         font-size: xx-large;
     }
+    #progress{
+        width: 100%;
+    }
+   
 }
