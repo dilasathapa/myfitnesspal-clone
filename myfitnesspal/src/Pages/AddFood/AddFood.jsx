@@ -33,7 +33,7 @@ export default function AddFood() {
 
   const searchForItem = () => {
     // console.log(item);
-    fetch(`http://localhost:8080/food-items?item=${item}`)
+    fetch(`https://tame-jade-chinchilla-hose.cyclic.app/food-items?item=${item}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
