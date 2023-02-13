@@ -18,6 +18,8 @@ import BlogArticleList from "../Blog/BlogArticleList";
 import AddFood from "../../Pages/AddFood/AddFood"
 import Food from "../../Pages/Food/Food"
 import Reports from "../../Pages/Reports/Reports"
+import BlogArticleLiseItem from "../Blog/BlogArticleListItem";
+import BlogPostPage from "../Blog/BlogPostPage";
 
 const AllRoutes = () => {
 
@@ -45,7 +47,7 @@ const AllRoutes = () => {
                 <Route path="/blogpage" element={<BlogPage />}></Route>
                 <Route path="/exercise" element={<Exercise />}></Route>
                 <Route path="/add_exercise" element={<AddExercise />}></Route>
-                <Route path="/blogposts" element={<BlogArticleList />}></Route>
+                <Route path="/blogposts" element={<BlogPostPage />}></Route>
                 <Route path="/add_food" element={<AddFood />}></Route>
                 <Route path="/food" element={<Food />}></Route>
                 <Route path="/reports" element={<Reports />}></Route>
