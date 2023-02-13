@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
                 <div id="calculations-bottom">
                   <div>
-                    <p>0</p>
+                    <p>2860</p>
                     <p>GOAL</p>
                   </div>
                   <div>
@@ -124,7 +124,7 @@ export default function Home() {
               <div id="lbs-gained">
                 <div>
                   <p>
-                    <span>0</span> lbs{" "}
+                    <span>{(calTotalCalories() - calTotalBurned())/100}</span> lbs{" "}
                   </p>
                   <p>GAINED</p>
                 </div>
@@ -134,7 +134,7 @@ export default function Home() {
               </div>
               <div id="bar">
               {/* <input type="range" style={{color}}/> */}
-              <progress id="progress" max="100" value="80" style={{height:"30px", accentColor:"rgb(133,196,0)"}}></progress>
+              <progress id="progress" max="20" value={(calTotalCalories() - calTotalBurned())/100} style={{height:"30px", accentColor:"rgb(133,196,0)"}}></progress>
               </div>
              
               {/* <div id='bar'
