@@ -7,8 +7,8 @@ const initialState = {
     Snacks: [],
     water_consumed: 0,
     food_notes: "",
-    cardio: [],
-    strength_training: [],
+    cardio: JSON.parse(localStorage.getItem("cardio"))||[],
+    strength_training: JSON.parse(localStorage.getItem("strength"))||[],
     exercise_notes: "",
     auth: {
         isLogin: JSON.parse(localStorage.getItem("login")) || false,
