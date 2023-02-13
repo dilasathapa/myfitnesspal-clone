@@ -85,3 +85,13 @@
 .ex_sr_list{
     cursor: pointer;
 }
+
+.loadercontainer {
+   height: 220px !important;
+    background-color: #00548f;
+    width: 402px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -49,3 +49,27 @@
 .dtpicker_con h3{
     color: white;
 }
+
+
+
+/* 
+Responsive
+*/
+
+@media only screen and (max-width:1024px) and (min-width:768px) {
+    .ex_date_main_con>div{
+        display: block;
+        align-items: center;
+        
+      
+    }
+}
+
+@media only screen and (max-width:767px) and (min-width:0px) {
+    .ex_date_main_con>div{
+        display: block;
+        align-items: center;
+        
+      
+    }
+}

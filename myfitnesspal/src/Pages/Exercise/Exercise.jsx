@@ -74,7 +74,7 @@ export default function Exercise() {
 
       <div className={styles.Exercise}>
         <div className={styles.mainDiv}>
-          <div>
+          <div className={styles.ex_ads}>
             <img
               src="https://tpc.googlesyndication.com/simgad/3928362859200258258"
               alt="ad"
@@ -231,7 +231,9 @@ export default function Exercise() {
             <br />
             <hr />
             <br />
-            <hr />
+
+            <br />
+            <br />
             <ExNote></ExNote>
           </div>
           <button className={styles.reportBtn}>

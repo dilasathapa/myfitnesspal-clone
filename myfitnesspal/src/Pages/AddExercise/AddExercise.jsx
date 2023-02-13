@@ -54,10 +54,14 @@ export default function AddExercise() {
 
   return (
     <div  style={{textAlign:'left',width:'60%',margin:'auto'}}>
+
+      <br />
          <h2 style={{color:'#00548f',margin:'0'}}>
             Add {type} Exercise
           </h2>
+          <br />
           <hr />
+          <br />
         <div>
          
           <div>
@@ -73,9 +77,10 @@ export default function AddExercise() {
           </div>
 
           <div>
-            <h4>
+            <h4 style={{color:'#00548f',margin:'0'}}>
               Matching Exercises:
             </h4>
+            <br />
             <div className={exStyle.exs_res_con}>
               <div className={exStyle.exs_result_div}>
                   <ul>
@@ -92,7 +97,12 @@ export default function AddExercise() {
                            
                         
                         ) :
-                          <div>No results found</div>
+                          <div className={exStyle.loadercontainer}>
+
+                            <h2>
+                            No Results Found
+                            </h2>
+                          </div>
                       )
                     }
                   </ul>
@@ -105,7 +115,7 @@ export default function AddExercise() {
                     <ExCardDet searchResult={exDetails}></ExCardDet>
                   ) : 
                   <ExStrengthDet searchResult={exDetails}></ExStrengthDet>
-              ): <div>No results found</div>
+              ): <div></div>
               )
              }
 
