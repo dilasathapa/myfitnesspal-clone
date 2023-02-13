@@ -14,6 +14,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   const logoutUser = () => {
+    localStorage.setItem("login", JSON.stringify(false));
     dispatch(logoutUserThunkActionCreator());
     navigate("/");
   };

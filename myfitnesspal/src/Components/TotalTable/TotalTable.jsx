@@ -23,7 +23,7 @@ export default function TotalTable({
   }, []);
 
   const dailyGoal = {
-    calories: 2310,
+    calories: 2860,
     carbs: 289,
     fat: 77,
     protein: 116,
