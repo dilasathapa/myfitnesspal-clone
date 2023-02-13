@@ -8,17 +8,18 @@ function Profile() {
   // const FileUpload = () => {
   const [file, setFile] = useState(null);
   const [fileData, setFileData] = useState(null);
-
+  console.log(fileData);
   const handleChange = (event) => {
     setFile(event.target.files[0]);
   };
-
+  localStorage.setItem("userImg",JSON.stringify(fileData));
   const handleRead = () => {
     const reader = new FileReader();
     reader.onload = (event) => {
       setFileData(event.target.result);
     };
     reader.readAsDataURL(file);
+    console.log(fileData);
   };
   const imageRef = useRef({
     current:

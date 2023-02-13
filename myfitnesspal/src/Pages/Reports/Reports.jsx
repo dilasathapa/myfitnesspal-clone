@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+
+
 export default function Reports() {
   const breakfast = useSelector((data) => {
     return data.Breakfast;
@@ -32,6 +34,10 @@ export default function Reports() {
 
   const exerciseNotes = useSelector((data) => {
     return data.exercise_notes;
+  });
+
+  const auth = useSelector((data) => {
+    return data.auth;
   });
 
   const printRef = useRef();
@@ -100,7 +106,7 @@ export default function Reports() {
       <div className={styles.Reports} ref={printRef}>
         <div className={styles.desc}>
           <div>
-            <h1>Printable Diary for mayanksharma5104</h1>
+            <h1>Printable Diary for {auth.userDetails.name}</h1>
             <p>
               This is a printable report for your food and exercise diary data,
               including daily notes.

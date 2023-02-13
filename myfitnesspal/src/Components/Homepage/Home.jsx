@@ -49,6 +49,9 @@ export default function Home() {
     }, 0);
   };
 
+
+  const profileImg = JSON.parse(localStorage.getItem("userImg"))|| null;
+
   return (
     <>
       <div className="parent">
@@ -101,19 +104,23 @@ export default function Home() {
             </div>
             <div id="calculator">
               <div className="upload-img">
-                <p>No photo</p>
-                <p>provided</p>
+                
+                {profileImg && <img src={profileImg} style={{width:"100%", height:"180px"}}/> }
+                {!profileImg && <p>No photo</p> }
+                {!profileImg && <p>provided</p> }
+                
                 <h4>
-                  <Link to="/profile" style={{ textDecoration: "none" }}>
+                {!profileImg && <Link to="/profile" style={{ textDecoration: "none" }}>
                     Upload Photo
-                  </Link>
+                  </Link> }
+                  
                 </h4>
               </div>
               <div className="calculations">
                 <div id="calculations-top">
                   <div>
                     <p>Calories Remaining</p>
-                    <h1>2860</h1>
+                    <h1>{2860 - (calTotalCalories() - calTotalBurned())}</h1>
                   </div>
                   <div>
                     <button>
