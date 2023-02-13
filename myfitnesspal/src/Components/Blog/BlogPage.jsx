@@ -4,16 +4,13 @@ import BlogFooter from './BlogFooter'
 import BlogHeader from './BlogHeader'
 import BlogNavbar from './BlogNavbar'
 import BlogSlides from './BlogSlides'
-
+import blogStyle from "./BlogStyles.module.css";
 
 export default function BlogPage() {
   return (
     <div>
 
-        <BlogHeader></BlogHeader>
-        <BlogNavbar></BlogNavbar>
-        <br />
-        <div style={{margin:'10px 200px'}}>
+        <div className={blogStyle.bpage_main_cont}>
         <BlogSlides></BlogSlides>
         <br />
         <BlogArticleList></BlogArticleList>

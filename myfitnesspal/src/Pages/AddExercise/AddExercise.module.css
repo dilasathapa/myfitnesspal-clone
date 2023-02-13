@@ -23,6 +23,11 @@
     color: #00548f;
     font-size: 14px;
     border-bottom: solid 1px rgb(230, 229, 228);
+    cursor: pointer;
+}
+.exs_result_div>ul>li:hover{
+    background-color: #e6e2e2;
+    cursor: pointer;
 }
 .exs_res_det_con{
     text-align: center;
@@ -75,4 +80,18 @@
     border-radius: 8px;
     margin: 10px;
     color: white;
+}
+
+.ex_sr_list{
+    cursor: pointer;
+}
+
+.loadercontainer {
+   height: 220px !important;
+    background-color: #00548f;
+    width: 402px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -31,6 +31,9 @@
     padding: 10px;
     width: 400px;
     margin: 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px inset;
+    border: none;
+    border-radius: 5px;
 }
 
 #searchBtn {
@@ -74,4 +77,109 @@
     background-color: rgb(200, 198, 198);
     padding: 5px;
     margin-top: -5px;
+}
+
+.exs_res_con{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.exs_result_div{
+    width: 420px;
+  
+    position: relative;
+ 
+}
+.exs_result_div>ul{
+    height: 220px !important;
+    margin: 0;
+    border: 1px solid #808080;
+    width: 402px;
+    display: block;
+    overflow: auto;
+    padding: 4px 8px;
+
+}
+.exs_result_div>ul>li{
+    padding: 10px 5px;
+    color: #00548f;
+    font-size: 14px;
+    border-bottom: solid 1px rgb(230, 229, 228);
+    cursor: pointer;
+}
+.exs_result_div>ul>li:hover{
+    background-color: #e6e2e2;
+    cursor: pointer;
+}
+.exs_res_det_con{
+    text-align: center;
+    color: #00548f;
+    background-color: #f6f6f6;
+    padding: 10px;
+    
+}
+.exs_res_det_con h5{
+    color: red;
+}
+.exs_res_det_con h4, h5, p{
+    margin: 0px;
+}
+.exs_res_det_con>div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exs_res_det_con>div>input {
+    padding: 5px;
+    width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px inset;
+    border: none;
+    margin: 0px 10px;
+}
+
+.exs_res_det_con>div>select {
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px inset;
+    border: none;
+    margin-left: 10px;
+}
+
+.exs_sr_input{
+    padding: 5px;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px inset;
+    border: none;
+
+}
+
+.exs_res_det_con>p{
+    font-size: 10px;
+    font-style: italic;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.exs_button{
+    background: rgb(59,144,59);
+    background: linear-gradient(0deg, rgba(59,144,59,1) 24%, rgba(128,219,128,1) 100%);
+    padding: 9px 25px;
+    border: solid 1px rgba(59,144,59,1);
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.ex_sr_list{
+    cursor: pointer;
+}
+
+.mealSelectDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
 }

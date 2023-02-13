@@ -16,30 +16,38 @@ export default function ExDate() {
   const [startDate, setStartDate] = useState(new Date());
  
   console.log(startDate)
-  const ComBtnDate=forwardRef(({onClick},ref)=>(
-    <button  onClick={onClick} ref={ref} >
-        <FontAwesomeIcon icon={faCaretRight} color="white" size="xl" />
+  const ComBtnDate=forwardRef(({value,onClick},ref)=>(
+    // <button  onClick={onClick} ref={ref} >
+    //     <FontAwesomeIcon icon={faCaretRight} color="white" size="xl" />
+    // </button>
+
+    <div className={exStyle.dtpicker_con}>
+    <button>
+    <FontAwesomeIcon icon={faCaretLeft} color="white" size='xl' />
     </button>
+
+
+   <div>
+   <h3 style={{margin:'0'}} onClick={onClick} ref={ref} >
+      {value}
+    </h3>
+   </div>
+    <button >
+    <FontAwesomeIcon icon={faCaretRight} color="white" size='xl' />
+    </button >
+     <button onClick={onClick} ref={ref} className={exStyle.btncalender}>
+    <FontAwesomeIcon icon={faCalendarDays} color="grey" size='xl' />
+    </button>
+  </div>
     
   ))
   return (
     <div className={exStyle.ex_date_main_con}>
       <div>
-        <h3 style={{ color: "#00548f", marginRight: "10px" }}>
+        <h3 style={{ color: "#00548f", marginRight: "10px",width:'350px' }}>
           Your Exercise Diary of:
         </h3>
-        <div>
-          <button>
-            <FontAwesomeIcon icon={faCaretLeft} color="white" size="xl" />
-          </button>
-
-          <div>
-              <h3>{startDate.date}</h3>
-          </div>
-          <button>
-            <FontAwesomeIcon icon={faCaretRight} color="white" size="xl" />
-          </button>
-        </div>
+      
 
         <DatePicker
               selected={startDate}

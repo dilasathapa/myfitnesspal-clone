@@ -37,3 +37,13 @@
     cursor: pointer;
     box-shadow: 0 0 10px green;
 }
+
+.exs_button{
+    background: rgb(59,144,59);
+    background: linear-gradient(0deg, rgba(59,144,59,1) 24%, rgba(128,219,128,1) 100%);
+    padding: 9px 25px;
+    border: solid 1px rgba(59,144,59,1);
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+}

@@ -1,9 +1,10 @@
 .Exercise {
-    width: 75%;
+    width: 1024px;
     margin: 20px auto 50px;
     /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
+    min-width: 1024px;
 }
 
 .mainDiv {
@@ -15,9 +16,9 @@
 }
 
 .Table {
-    width: 90%;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 100%;
+    overflow-x: scroll;
+   
     
 }
 
@@ -88,3 +89,9 @@ Note style
     cursor: pointer;
     color: rgb(228, 128, 13);
 }
+
+
+/* 
+Responsive
+*/
+

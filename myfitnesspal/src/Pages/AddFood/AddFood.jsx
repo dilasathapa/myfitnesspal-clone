@@ -1,19 +1,16 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import styles from "./AddFood.module.css";
-import { useDispatch } from "react-redux";
-import { addFoodThunkActionCreator } from "../../Redux/action";
+import ItemCard from "./ItemCard";
 
 export default function AddFood() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
   const [searchParams, setSearchParams] = useSearchParams();
   const meal = searchParams.get("meal");
 
   const [item, setItem] = useState("");
   const [searchResult, setSearchResult] = useState();
+  const [foodDetails, setDetails] = useState({});
 
   console.log(searchResult);
 
@@ -33,7 +30,7 @@ export default function AddFood() {
 
   const searchForItem = () => {
     // console.log(item);
-    fetch(`http://localhost:8080/food-items?item=${item}`)
+    fetch(`https://tame-jade-chinchilla-hose.cyclic.app/food-items?q=${item}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -42,11 +39,6 @@ export default function AddFood() {
       .catch((err) => {
         console.log(err);
       });
-  };
-
-  const addToMeal = () => {
-    dispatch(addFoodThunkActionCreator(meal, searchResult[0]));
-    navigate("/food");
   };
 
   return (
@@ -69,38 +61,44 @@ export default function AddFood() {
                 setItem(e.target.value);
               }}
             />
-            <div id={styles.searchResultDiv}>
-              {searchResult &&
-                (searchResult.length > 0 ? (
-                  <div>
-                    {searchResult[0].item}{" "}
-                    <button onClick={addToMeal}>Add to meal</button>
-                  </div>
-                ) : (
-                  <div>No results found</div>
-                ))}
-            </div>
-            <button id={styles.searchBtn} onClick={searchForItem}>
+            <button className={styles.exs_button} onClick={searchForItem}>
               Search
             </button>
+
+            <div>
+              <h4>Matching food items:</h4>
+              <div className={styles.exs_res_con}>
+                <div className={styles.exs_result_div}>
+                  <ul>
+                    {searchResult &&
+                      (searchResult.length > 0 ? (
+                        searchResult.map((el) => {
+                          return (
+                            <li
+                              onClick={() => {
+                                setDetails(el);
+                              }}
+                            >
+                              {el.item}
+                            </li>
+                          );
+                        })
+                      ) : (
+                        <div>No results found</div>
+                      ))}
+                  </ul>
+                </div>
+
+                {searchResult &&
+                  (searchResult.length > 0 ? (
+                    <ItemCard searchResult={foodDetails} meal={meal} />
+                  ) : (
+                    <div>No results found</div>
+                  ))}
+              </div>
+            </div>
           </div>
-          <div className={styles.tableDiv}>
-            <h3>{meal}</h3>
-            <table className={styles.itemsTable}>
-              <thead></thead>
-              <tbody>
-                {foodItems.map((el) => {
-                  return (
-                    <tr key={el.id}>
-                      <td>
-                        <input type="checkbox" /> &nbsp; {el.item}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+
           <div className={styles.bottomAd}>
             <img
               src="https://tpc.googlesyndication.com/simgad/4841471653946608601"

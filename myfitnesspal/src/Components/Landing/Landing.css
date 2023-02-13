@@ -1,4 +1,7 @@
-.Landing_header{
+*{
+    margin: 0;
+    padding: 0;
+}.Landing_header{
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     justify-content: space-around;
@@ -7,7 +10,7 @@
 }
 
 .main_div{
-    width:60%;
+    width:75%;
     margin:auto;
 }
 

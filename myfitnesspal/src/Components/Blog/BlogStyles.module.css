@@ -70,7 +70,7 @@ gap: 20px;
     background: #fff;
 }
 .blist_feature_img{
-
+    width: 100%;
 }
 .blist_feature_tcon>h1{
     color: #0066ee;
@@ -162,6 +162,7 @@ gap: 20px;
 .bfooter_btlink{
     text-decoration: none;
     color: #0066ee;
+    
 }
 .bfooter_btlink:hover{
     color: rgb(65, 62, 62);
@@ -211,3 +212,123 @@ gap: 20px;
     padding: 0px 10px;
 }
     
+.bpost_main_con{
+        width: 70%;
+        
+}  
+.bpost_main_con>div>div img{
+    width: 100%;
+} 
+
+.bpost_auth_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0px 10px;
+}
+.bpost_auth_topcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bpost_auth_topcon> p>span{
+    color: #0066ee;
+    font-weight: 300;
+}
+.bpost_auth_topcon> p{
+    font-weight: 300;
+    font-size: 12px;
+    color: #47494a;
+}
+.bpost_auth_mnarration{
+    text-align: left;
+}
+.bpost_auth_mnarration>p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #47494a;
+}
+
+.loadercontainer {
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.834)
+        url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center
+        no-repeat;
+    z-index: 1;
+}
+
+.bpost_adet_con{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+.bpost_adet_con>div{
+    margin-left: 10px;
+}
+.bpost_adet_con>div>h3{
+    color: #0066ee;
+    margin-bottom: 10px;
+
+}
+.bpost_adet_con>div>p{
+    font-size: 15px;
+}
+
+.bpage_main_cont{
+    margin: 10px 200px;
+}
+
+.bpost_title_div{
+    display: flex;
+}
+
+@media only screen and (max-width:1024px) and (min-width:768px) {
+    .blist_con{
+        display: grid;
+        
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+    }
+
+    .bpage_main_cont{
+        margin: 10px 50px;
+    }
+}
+
+@media only screen and (max-width:767px) and (min-width:0px) {
+    .blist_con{
+        display: grid;
+        
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    }
+    .blist_ft_nar{
+      
+    }
+
+    .blist_feature_tcon{
+ 
+        width: 100%;
+        background: #ffffff;
+        position: static;
+    }
+    .blist_feature_con{
+        position:unset;
+    }
+
+    .bpage_main_cont{
+        margin: 10px 10px;
+    }
+
+    .bpost_title_div{
+        display: block;
+    }
+
+   
+    
+}
+
