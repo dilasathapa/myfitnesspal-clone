@@ -54,7 +54,7 @@ export default function Home() {
             <button> <Link id="link-color">Goals</Link> </button>
             <button> <Link id="link-color">Check-In</Link> </button>
             <button> <Link id="link-color">Mail</Link> </button>
-            <button> <Link id="link-color">Profile</Link> </button>
+            <button> <Link id="link-color" to="/profile">Profile</Link> </button>
             <button> <Link id="link-color">Friends</Link> </button>
             <button> <Link id="link-color">Settings</Link> </button>
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
             <div id="top-header">
               <h2>Your Daily Summary</h2>
               <div>
-                <h2>4</h2>
+                <h2>1</h2>
                 <div>
                   <p>DAY</p>
                   <p>STREAK</p>
@@ -76,13 +76,13 @@ export default function Home() {
               <div className="upload-img">
                 <p>No photo</p>
                 <p>provided</p>
-                <h4>Upload Photo</h4>
+                <h4><Link to='/profile'  style={{textDecoration:"none"}}>Upload Photo</Link></h4>
               </div>
               <div className="calculations">
                 <div id="calculations-top">
                   <div>
                     <p>Calories Remaining</p>
-                    <h1>1400</h1>
+                    <h1>2860</h1>
                   </div>
                   <div>
 
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
                 <div id="calculations-bottom">
                   <div>
-                    <p>1400</p>
+                    <p>0</p>
                     <p>GOAL</p>
                   </div>
                   <div>
@@ -132,7 +132,11 @@ export default function Home() {
                   <FaClipboardList className="clip-icon" />
                 </div>
               </div>
-              <div id="bar"></div>
+              <div id="bar">
+              {/* <input type="range" style={{color}}/> */}
+              <progress id="progress" max="100" value="80" style={{height:"30px", accentColor:"rgb(133,196,0)"}}></progress>
+              </div>
+             
               {/* <div id='bar'
                 class="progress-bar progress-bar-striped progress-bar-animated"
                 role="progressbar"
