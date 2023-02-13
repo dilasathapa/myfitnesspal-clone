@@ -12,7 +12,12 @@ const initialState = {
     exercise_notes: "",
     auth: {
         isLogin: false,
-        userDetails: {},
+        userDetails: {
+            name: "",
+            gender: "",
+            email: "",
+            password: "",
+        },
     }
 };
 
