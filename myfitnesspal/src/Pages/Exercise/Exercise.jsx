@@ -17,18 +17,16 @@ export default function Exercise() {
     return data.strength_training;
   });
   console.log(strength);
-  useEffect(() => {
+ 
 
-  }, [])
-
-  const carMinTotal = () => {
+  const totMinDaily = () => {
     return (
       cardio.reduce((acc, el) => {
         return acc + el["minutes"];
       }, 0)
     )
   }
-  const carCalTotal = () => {
+  const totCalDaily = () => {
     return (
       cardio.reduce((acc, el) => {
         return acc + el["calories_burned"];
@@ -36,18 +34,29 @@ export default function Exercise() {
     )
   }
 
-  let totMinDaily = 0
-  let totMinWeek = 0
-  let totCalDaily = 0
-  let totCalWeek = 0;
+  // let totMinDaily = 0
+  // let totMinWeek = 0
+  // let totCalDaily = 0
+  // let totCalWeek = 0;
 
 
-  console.log(carCalTotal())
 
   const dispatch = useDispatch();
 
   const deleteExercise = (type, id) => {
     dispatch(removeExerciseThunkActionCreator(type, id));
+
+    if(type==='cardio'){
+      localStorage.setItem(type,JSON.stringify(cardio.filter((el) => {
+        return el.id !== id;
+    })))
+    }else if(type==="strength"){
+      localStorage.setItem(type,JSON.stringify(strength.filter((el) => {
+        return el.id !== id;
+    })))
+    }
+   
+
   };
 
   return (
@@ -77,7 +86,11 @@ export default function Exercise() {
             Your food diary for: <input type="date" name="date" id="date" />
           </h4>
         </div> */}
+        <br />
           <ExDate></ExDate>
+          <br />
+          <hr />
+          <br />
           <div className={styles.exerciseDiv}>
             <table className={styles.Table}>
               <thead>
@@ -110,7 +123,7 @@ export default function Exercise() {
                 <tr>
                   <td>
                     <div style={{ display: "flex", justifyContent: "end" }}>
-                      <h4 style={{ margin: "0" }}>
+                      <h4 style={{ margin: "0",fontSize:'15px'}}>
                         Daily Total /{" "}
                         <span style={{ color: "#00548f" }}>Goal</span>
                       </h4>
@@ -118,8 +131,8 @@ export default function Exercise() {
                   </td>
                   <td style={{ backgroundColor: '#f6f6f6' }}>
 
-                    <h4 style={{ margin: "0" }}>
-                      <span>{totMinDaily}</span>
+                    <h4 style={{ margin: "0",fontSize:'15px' }}>
+                      <span>{totMinDaily()}</span>
                       &nbsp;/&nbsp;
                       <span style={{ color: "#00548f" }}>0</span>
                     </h4>
@@ -128,8 +141,8 @@ export default function Exercise() {
 
                   <td style={{ backgroundColor: '#f6f6f6' }}>
 
-                    <h4 style={{ margin: "0" }}>
-                      <span>{totCalDaily}</span>
+                    <h4 style={{ margin: "0",fontSize:'15px' }}>
+                      <span>{totCalDaily()}</span>
                       &nbsp;/&nbsp;
                       <span style={{ color: "#00548f" }}>0</span>
                     </h4>
@@ -139,7 +152,7 @@ export default function Exercise() {
                 <tr>
                   <td style={{ textAlign: "right" }}>
 
-                    <h4 style={{ margin: "0" }}>
+                    <h4 style={{ margin: "0",fontSize:'15px' }}>
                       Weekly Total /{" "}
                       <span style={{ color: "#00548f" }}>Goal</span>
                     </h4>
@@ -147,8 +160,8 @@ export default function Exercise() {
                   </td>
                   <td style={{ backgroundColor: '#f6f6f6' }}>
 
-                    <h4 style={{ margin: "0" }}>
-                      <span>{totMinWeek}</span>
+                    <h4 style={{ margin: "0" ,fontSize:'15px' }}>
+                      <span>{totMinDaily()}</span>
                       &nbsp;/&nbsp;
                       <span style={{ color: "#00548f" }}>0</span>
                     </h4>
@@ -157,14 +170,17 @@ export default function Exercise() {
 
                   <td style={{ backgroundColor: '#f6f6f6' }}>
 
-                    <h4 style={{ margin: "0" }}>
-                      <span>{totCalWeek} </span>
+                    <h4 style={{ margin: "0",fontSize:'15px' }}>
+                      <span>{totCalDaily()} </span>
                       &nbsp;/&nbsp;
                       <span style={{ color: "#00548f" }}>0</span>
                     </h4>
 
                   </td>
                 </tr>
+                <br />
+                <hr />
+                <br />
                 <tr className={styles.mealTotalRow}>
                   <td>
                     <Link to={`/add_exercise?type=cardio`} style={{ textDecoration: 'none', color: '#0072bf', fontWeight: 'bold' }}>Add Exercise</Link> &nbsp; | &nbsp;
@@ -212,7 +228,9 @@ export default function Exercise() {
                 </tr>
               </tbody>
             </table>
+            <br />
             <hr />
+            <br />
             <hr />
             <ExNote></ExNote>
           </div>
