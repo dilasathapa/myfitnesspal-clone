@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import BlogArticleLiseItem from "./BlogArticleListItem";
 import BlogSlides from "./BlogSlides";
 import listStyle from "./BlogStyles.module.css";
+import {Link} from 'react-router-dom'
 
 export default function BlogArticleList() {
   const [load,setLoad]=useState(false)
@@ -134,19 +135,20 @@ export default function BlogArticleList() {
           <h3>LATEST ARTICLES</h3>
         </div>
         <div>
-          <img
+         <Link to='/blogposts'>
+         <img
             className={listStyle.blist_feature_img}
-            src="https://blog.myfitnesspal.com/wp-content/uploads/2022/02/The-Health-Benefits-of-Chocolate-1140x545.jpg.webp"
+            src="https://blog.myfitnesspal.com/wp-content/uploads/2020/02/15-Make-Ahead-Breakfasts-Under-300-Calories-6.jpg"
             alt="THE HEALTH BENEFITS OF CHOCOLATE"
           />
+         </Link>
 
           <div className={listStyle.blist_feature_tcon}>
-            <h1>THE HEALTH BENEFITS OF CHOCOLATE</h1>
+            <h1>15 Make-Ahead Breakfasts Under 300 Calories</h1>
             <p>
-              Not all chocolate is created equal. Here’s how to satisfy your
-              craving and enjoy some health benefits, too.
+            Make your morning routine a breeze by preparing a few nutritious staples ahead of time, like hearty oatmeal cups, simple egg dishes and grab-and-go bars. Your alarm clock will thank you!
             </p>
-            <p>SIDNEY FRY, MS, RD - FEBRUARY 6, 2023</p>
+            <p>MYFITNESSPAL’S RECIPES  - FEBRUARY 6, 2020</p>
           </div>
         </div>
       </div>

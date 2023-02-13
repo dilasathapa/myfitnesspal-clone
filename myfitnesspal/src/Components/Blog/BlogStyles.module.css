@@ -70,7 +70,7 @@ gap: 20px;
     background: #fff;
 }
 .blist_feature_img{
-
+    width: 100%;
 }
 .blist_feature_tcon>h1{
     color: #0066ee;
@@ -162,6 +162,7 @@ gap: 20px;
 .bfooter_btlink{
     text-decoration: none;
     color: #0066ee;
+    
 }
 .bfooter_btlink:hover{
     color: rgb(65, 62, 62);
@@ -211,3 +212,40 @@ gap: 20px;
     padding: 0px 10px;
 }
     
+.bpost_main_con{
+        width: 70%;
+        
+}  
+.bpost_main_con>div>div img{
+    width: 100%;
+} 
+
+.bpost_auth_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0px 10px;
+}
+.bpost_auth_topcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bpost_auth_topcon> p>span{
+    color: #0066ee;
+    font-weight: 300;
+}
+.bpost_auth_topcon> p{
+    font-weight: 300;
+    font-size: 12px;
+    color: #47494a;
+}
+.bpost_auth_mnarration{
+    text-align: left;
+}
+.bpost_auth_mnarration>p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #47494a;
+}
