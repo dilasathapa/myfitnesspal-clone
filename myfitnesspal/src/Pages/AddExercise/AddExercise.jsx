@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { json, useSearchParams } from "react-router-dom";
 import exStyle from "./AddExercise.module.css";
 import { addExerciseThunkActionCreator } from "../../Redux/action";
-import { saveNotesThunkActionCreator } from "../../Redux/action"; 
+import { saveNotesThunkActionCreator } from "../../Redux/action";
 import { useNavigate } from "react-router-dom";
 import ExCardDet from "./ExCardDet";
 import ExStrengthDet from "./ExStrengthDet";
@@ -12,7 +12,6 @@ export default function AddExercise() {
   const [searchParams, setSearchParams] = useSearchParams();
   // const [minVal,setMinVal]=useState(0)
   // const [calVal,setCalVal]=useState(0)
-
 
   const type = searchParams.get("type");
   console.log(type);
@@ -32,11 +31,13 @@ export default function AddExercise() {
 
   const [title, setTitle] = useState("");
   const [searchResult, setSearchResult] = useState();
-  const [exDetails,setDetails]=useState({})
+  const [exDetails, setDetails] = useState({});
 
   const searchExercise = () => {
-     console.log(title);
-    fetch(`https://tame-jade-chinchilla-hose.cyclic.app/${type}-workouts?q=${title}`)
+    console.log(title);
+    fetch(
+      `https://tame-jade-chinchilla-hose.cyclic.app/${type}-workouts?q=${title}`
+    )
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -50,72 +51,67 @@ export default function AddExercise() {
   //   navigate("/exercise");
   // };
 
- 
-
   return (
-    <div  style={{textAlign:'left',width:'60%',margin:'auto'}}>
-         <h2 style={{color:'#00548f',margin:'0'}}>
-            Add {type} Exercise
-          </h2>
-          <hr />
+    <div style={{ textAlign: "left", width: "60%", margin: "auto" }}>
+      <h2 style={{ color: "#00548f", margin: "0" }}>Add {type} Exercise</h2>
+      <hr />
+      <div>
         <div>
-         
+          <h4 style={{ color: "#00548f", margin: "0" }}>
+            Search our exercise database by name:
+          </h4>
           <div>
-            <h4 style={{color:'#00548f',margin:'0'}}>
-              Search our exercise database by name: 
-            </h4>
-            <div>
-              <input className={exStyle.exs_sr_input} type="text" value={title} onChange={(e)=>{
-                setTitle(e.target.value)
-              }} />
-              <button onClick={searchExercise} className={exStyle.exs_button}>Search</button>
-            </div>
-          </div>
-
-          <div>
-            <h4>
-              Matching Exercises:
-            </h4>
-            <div className={exStyle.exs_res_con}>
-              <div className={exStyle.exs_result_div}>
-                  <ul>
-                   
-                    {
-                      searchResult && (
-                        searchResult.length>0?(
-                          searchResult.map((el)=>{
-                        
-                            return <li onClick={()=>{
-                                setDetails(el)
-                            }}>{el.title}</li>
-                          })
-                           
-                        
-                        ) :
-                          <div>No results found</div>
-                      )
-                    }
-                  </ul>
-              </div>
-
-             {
-              searchResult && (
-              searchResult.length>0 ? (
-                  type==='cardio' ? (
-                    <ExCardDet searchResult={exDetails}></ExCardDet>
-                  ) : 
-                  <ExStrengthDet searchResult={exDetails}></ExStrengthDet>
-              ): <div>No results found</div>
-              )
-             }
-
-
-              <div>
-
-              </div>
-            </div>
+            <input
+              className={exStyle.exs_sr_input}
+              type="text"
+              value={title}
+              onChange={(e) => {
+                setTitle(e.target.value);
+              }}
+            />
+            <button onClick={searchExercise} className={exStyle.exs_button}>
+              Search
+            </button>
           </div>
         </div>
+
+        <div>
+          <h4>Matching Exercises:</h4>
+          <div className={exStyle.exs_res_con}>
+            <div className={exStyle.exs_result_div}>
+              <ul>
+                {searchResult &&
+                  (searchResult.length > 0 ? (
+                    searchResult.map((el) => {
+                      return (
+                        <li
+                          onClick={() => {
+                            setDetails(el);
+                          }}
+                        >
+                          {el.title}
+                        </li>
+                      );
+                    })
+                  ) : (
+                    <div>No results found</div>
+                  ))}
+              </ul>
+            </div>
+
+            {searchResult &&
+              (searchResult.length > 0 ? (
+                type === "cardio" ? (
+                  <ExCardDet searchResult={exDetails}></ExCardDet>
+                ) : (
+                  <ExStrengthDet searchResult={exDetails}></ExStrengthDet>
+                )
+              ) : (
+                <div>No results found</div>
+              ))}
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }

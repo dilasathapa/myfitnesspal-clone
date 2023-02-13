@@ -23,6 +23,7 @@
     width: 100%;
     border-collapse: collapse;
     border: 2px solid blue;
+    margin-bottom: 50px;
 }
 
 .reportsTable th {
@@ -85,4 +86,9 @@
 .blueBtn:hover {
     cursor: pointer;
     background-color: rgb(0, 84, 196);
+}
+
+.Reports > button:last-child {
+    display: block;
+    margin: auto;
 }
