@@ -15,7 +15,7 @@ export default function CompleteEntry({ isEatingEnough }) {
             onClick={() => {
               setShowDetails(true);
             }}
-            className={styles.greenBtn}
+            className={styles.exs_button}
           >
             Complete This Entry
           </button>
@@ -69,7 +69,7 @@ export default function CompleteEntry({ isEatingEnough }) {
           onClick={() => {
             setShowDetails(false);
           }}
-          className={styles.greenBtn}
+          className={styles.exs_button}
         >
           Make Additional Entries
         </button>
