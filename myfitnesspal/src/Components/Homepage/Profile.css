@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
+}
+
+#profile-parent {
+    /* border: 4px solid red; */
+    height: 1000px;
+}
+#profile-info{
+    /* border: 2px solid blue; */
+    width: 60%;
+    margin: 2% auto;
+}
+#profile-info > h1{
+    margin-left: 2%;
+}
+#user-img p{
+   margin-left: 30%;
+   /* color: orange; */
+   
+}
+
+#user-img p:nth-child(1){
+    margin-top: 10%;
+}
+#user-img input{
+    margin: 40% 0 0 10% ;
+    color: red;
+    cursor: pointer;
+}
+#user-img button{
+    margin: 10% 25%;
+    width: 50%;
+    height: 30px;
+    background-color: rgb(92,185,92);
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+#user-img button:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+#info{
+    padding: 10px;
+    /* border: 2px solid rgb(90, 16, 90); */
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px; */
+    /* box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    margin: 2% ;
+    background-color: rgb(246,246,246);
+}
+#show-side > div:nth-child(1){
+    border: 2px solid gray;
+    border-radius: 5px;
+   background-color: #fff;
+    height: 250px;
+    width: 230px;
+    margin: 2% 0 2% 2%;
+}
+#show-side > div:nth-child(1):hover{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#show-side{
+    display: flex;
+}
+
+#details{
+    border: 0px solid blue;
+    margin: 2% 0 0 6%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+#details>p:nth-child(1){
+    margin-top: 2%;
+    /* font-weight: 100; */
+    font-size: medium;
+    color: red;
+}
+#details>p:nth-child(2){
+    margin-top: 2%;
+    /* font-weight: 100; */
+    font-size: medium;
+}
+#details > p:nth-child(3){
+    margin-top: 2%;
+    /* font-weight: 100; */
+    font-size: medium;
+}
+.edit-profile{
+    height: 50px;
+    width: 38%;
+    color: #fff;
+    margin: 4% 0 3% 0;
+    border: none;
+    background-color: rgb(0,102,238);
+    border-radius: 4px;
+    font-size: large;
+    cursor: pointer;
+    /* font-weight: 100; */
+}
+.edit-profile:hover{
+    background-color: orange;
+
+}
+.edit-photo{
+    height: 50px;
+    width: 38%;
+    color: #fff;
+    margin: 4% 0 3% 0;
+    border: none;
+    font-size: large;
+    background-color: rgb(0,102,238);
+    border-radius: 4px;
+    cursor: pointer;
+    /* font-weight: 100; */
+} 
+.edit-photo:hover{
+    background-color: orange;
+}
+#bottom-info{
+    display: flex;
+    background-color: #fff;
+    margin-left: 4%;
+}
+#bottom-info > div:nth-child(1) > h3{
+    color:rgb(0,102,238); 
+    margin-top: 8%;
+    /* font-weight: 100; */
+    
+}
+#bottom-info > div:nth-child(1) > p{
+margin-top: 3%;
+font-size: small;
+}
+#bottom-info > div:nth-child(2){
+    width: 64%;
+    margin-left: 6%;
+}
+.share-button{
+    width: 90%;
+}
+
+#newsfeed{
+    /* border: 2px solid red; */
+    margin-top: 3%;
+    height: 130px;
+    background-color: rgb(246,246,246);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+#newsfeed > div:nth-child(1) > h3{
+    color: #fff;
+    background-color: rgb(10,82,130);
+    height: 20px;
+    align-items: center;
+    /* text-align: center; */
+    padding: 10px;
+    padding-left: 3%;
+    /* font-weight: 100; */
+}
+#textarea{
+    width: 70%;
+    margin: 3% 0 2% 3%;
+}
+#newsfeed > div:nth-child(2){
+    display: flex;
+    /* background-color: rgb(246,246,246); */
+}
+#newsfeed > div:nth-child(2) > div>button{
+    /* width: 40%; */
+    /* border: 1px solid ; */
+    border: none;
+    margin: 40% 3% 2% 50%; 
+    height: 40px;
+    width: 200%;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgb(0,102,238);
+    cursor: pointer;
+    /* padding-left: 20%;  */
+}
+#newsfeed > div:nth-child(2) > div>button:hover{
+    /* background-color: rgb(10,82,130); */
+    background-color: orange;
+
+}

@@ -1,0 +1,75 @@
+.ex_date_main_con{
+    display: flex;
+    align-items: center;
+    
+  
+}
+.ex_date_main_con>div{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.btncalender{
+    margin-left: 5px;
+    width: 50px;
+    height: 40px;
+    border: none;
+}
+
+
+.dtpicker_con{
+    display: flex;
+}
+.dtpicker_con>button:nth-last-of-type(2){
+    background-color: #00548f;
+    padding: 5px 8px;
+    height: 40px;
+    border-radius: 0px 8px 8px 0PX;
+    border: none;
+    margin-left: 2px;
+}
+.dtpicker_con>button:nth-last-of-type(3){
+    background-color: #00548f;
+    padding: 5px 8px;
+    height: 40px;
+    border-radius: 8px 0px 0px 8PX;
+    border: none;
+    margin-right: 2px;
+}
+.dtpicker_con>div{
+    background-color: #00548f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+.dtpicker_con h3{
+    color: white;
+}
+
+
+
+/* 
+Responsive
+*/
+
+@media only screen and (max-width:1024px) and (min-width:768px) {
+    .ex_date_main_con>div{
+        display: block;
+        align-items: center;
+        
+      
+    }
+}
+
+@media only screen and (max-width:767px) and (min-width:0px) {
+    .ex_date_main_con>div{
+        display: block;
+        align-items: center;
+        
+      
+    }
+}

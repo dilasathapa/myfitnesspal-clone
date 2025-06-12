@@ -1,0 +1,370 @@
+.Landing_header{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 75px; */
+}
+
+.main_div{
+    width:60%;
+    margin:auto;
+}
+
+.Land-one{
+    display:flex;
+    margin:20px;
+    padding-top: 36px;
+}
+
+.Land-one h1{
+    font-size: 60px;
+    width: 80%;
+    font-weight: 900;
+}
+
+.Land-one p{
+    width: 75%;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    text-align: inherit;
+    color: #0f0f0f;
+}
+
+.startbtn {
+    text-decoration: none;
+    font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.75;
+    text-transform: uppercase;
+    min-width: 64px;
+    color: #fff;
+    background-color: #0066EE;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 15px 48px;
+    align-items: center;
+    justify-content: left;
+}
+
+.startbtn:hover{
+    background-color: #1943cf;
+}
+
+@media only screen and (min-width:768px ) and (max-width:1023px){
+    .main_div{
+        width:90%;
+        margin:auto;
+    }
+    
+    .Land-one{
+        display:inline-flex;
+        margin:auto;
+        padding-top: 36px;
+        justify-content: center;
+        align-items: center;
+    }   
+    .Land-one h1{
+        font-size: 60px;
+        width: 80%;
+        font-weight: 900;
+    }
+
+    .Land-one p{
+        width: 75%;
+        margin-top: 25px;
+        margin-bottom: 40px;
+        text-align: inherit;
+        color: #0f0f0f;
+    } 
+} 
+
+@media only screen and (min-width:340px) and (max-width:767px){
+
+} 
+
+
+
+/* land-two */
+
+.Land-two{
+    width: 80%;
+    display:flex;
+    margin:auto;
+    padding-top: 36px;
+    align-items:center ;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.Land-two img{
+    height: 400px;
+    margin-right: 25px;
+}
+
+.Land-two h1{
+    font-size: 48px;
+    text-align: inherit;
+    max-width: 550px;
+    font-weight: bolder;
+    line-height: 1.08;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.Land-two p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
+    width: 75%;
+    line-height: 24px;
+}
+
+/* three */
+
+.Land-three h1{
+    text-align: center;
+    margin-bottom: 24px;
+    min-width: 560px;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 54px;
+    font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
+}
+
+.Land-three p{
+    font-size: 16px;
+    /* min-width: unset; */
+    max-width: 550px;
+    margin: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    line-height: 24px;
+    text-align: center;
+    font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
+}
+
+.Land-four{
+    display:flex;
+    margin:auto;
+    padding-top: 36px;
+}
+
+.Land-four div{
+    margin:20px;
+    padding-top: 15px;
+}
+
+.Land-four div>h3{
+    width: 80%;
+    margin:auto;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.Land-four div>p{
+    width: 80%;
+    margin:auto;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.Land-four div>img{
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 10px;
+    width: 90px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+/* five  */
+
+.Land-five{
+    margin: 20px;
+    padding-top: 36px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Land-five h1{
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* slide  */
+
+.slide-box{
+    border:1px solid red;
+    width: 70%;
+    height:50vh;
+    margin: 50px auto;
+    position: relative;
+    
+}
+.slider{
+    width: 100%;
+    display: inline-flex;
+    transition: 0.7s;
+}
+
+#slide{
+    display: flex;
+    padding: 20px;
+    margin: 15px;
+    width: 100%;
+    border:1px solid red;
+}
+
+.slider img{
+    /* height: 250px; */
+    width: 100%;
+}
+
+.indicators{
+    position: relative;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+.indicators span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+
+
+
+/* mid button  */
+
+.mid_btn {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    display: block;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.mid_startbtn {
+    text-decoration: none;
+    font-family: "Inter",Helvetica,Arial,-apple-system,sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.75;
+    text-transform: uppercase;
+    min-width: 64px;
+    color: #fff;
+    background-color: #0066EE;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    justify-content: center;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    padding: 15px 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mid_startbtn:hover{
+    background-color: #1943cf;
+}
+
+.Land_five{
+    margin:20px;
+    padding-top:36px;
+    align-items: center;
+}
+
+.Land_five h1{
+    text-align: center;
+    margin:20px;
+    padding-top:36px;
+}
+
+.Land_five p{
+    text-align: center;
+    padding-top:36px;
+}
+
+/* 7 */
+
+.Land_seven{
+    width:35%;
+    margin:auto;
+    padding-Top: 36px ;
+    justify-content: center;
+}
+
+.Land_seven h1{
+    text-align: center;
+    font-size: 48px;
+    line-height: 1.08;
+    font-weight: 900;
+    margin-bottom: 16px;
+    max-width: 482px;
+}
+
+.Land_seven p{
+    text-align: center;
+    margin:auto;
+    font-size: 16px;
+    color:gray;
+    margin-bottom: 40px;
+    padding-left: 39px;
+    padding-right: 39px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.Land_eig{
+    height:300px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.Land_nin{
+    text-align: center;
+    margin:auto;
+    font-size: 16px;
+    color:gray;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding-left: 39px;
+    padding-right: 39px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.footStyle{
+    height:120px ; 
+    background-color:#f6f6f8;
+    padding-top:20px;
+    text-align: center;
+}

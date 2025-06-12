@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.bnav_container{
+        display: flex;
+        background-color: #0066ee;
+        justify-content: center;
+        
+}
+.bnav_pages{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.nslide_item_con{
+width: 200px;
+}
+.bslide_img{
+    width: 200px;
+}
+.bslide_title{
+
+}
+
+.blist_item_con{
+   
+    text-align: left;
+}
+.blist_item_img{
+    width: 100%;
+}
+.blist_item_title{
+
+    color: rgb(66, 59, 59);
+    font-weight: 500;
+    font-size: 17px;
+    margin: 0;
+    margin-top: 5px;
+}
+.blist_item_date{
+    color: rgb(136, 132, 132);
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.blist_con{
+    display: grid;
+    
+grid-template-columns: repeat(3, 3fr);
+gap: 20px;
+}
+.blist_feature_con{
+    text-align: left;
+    position: relative;
+
+}
+
+.blist_feature_tcon{
+    width: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 20px 25px;
+    background: #fff;
+}
+.blist_feature_img{
+    width: 100%;
+}
+.blist_feature_tcon>h1{
+    color: #0066ee;
+}
+.blist_feature_tcon p:nth-child(2){
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+.blist_feature_tcon p:nth-child(3){
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgb(129, 123, 123);
+}
+
+.blist_load_con{
+    background-color: #0066ee;
+    padding: 10px;
+    color: white;
+}
+.blist_load_con>h3{
+    margin: 0;
+}
+
+.bfooter_con{
+    background-color: #eeeeee;
+    text-align: center;
+    
+
+}
+
+.bfooter_con>div{
+    padding-top: 50px;
+    width: 40%;
+    margin: auto;
+    
+}
+.bfooter_con>div>img{
+    max-width: 30rem;
+    height: auto;
+    width: 275px;
+    aspect-ratio: auto 375 / 57;
+    
+}
+.bfooter_con>div>p>a{
+    color: #0066ee;
+    text-decoration: none;
+}
+.bfooter_con>div>p>a:hover{
+    color: black;
+}
+
+.bfooter_con>div>p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.bfooter_link_con{
+    display: flex;
+    width: 100%;
+   
+    padding: 10px 0px;
+    justify-content: center;
+    
+}
+.bfooter_link_con>div{
+    display: flex;
+    
+}
+.bfooter_link_con p{
+    font-size: 12px;
+    padding: 0px 10px;
+    color: rgb(148, 143, 143);
+    font-weight: 300;
+}
+
+.bfooter_link_con>div p::before{
+    content: '|';
+    padding: 0px 10px;
+}
+
+.bfooter_link_con>div p:hover{
+    color: #0066ee;
+    cursor: pointer;
+}
+.bfooter_btlink{
+    text-decoration: none;
+    color: #0066ee;
+    
+}
+.bfooter_btlink:hover{
+    color: rgb(65, 62, 62);
+}
+
+.bheader_main_con{
+    display: flex;
+}
+
+.bheader_con_1{
+   
+    width: 20%;
+}
+.bheader_con_2{
+    
+    width: 60%;
+    padding: 25px 0px;
+}
+.bheader_con_3{
+    display: flex;
+    width: 20%;
+    justify-content:center;
+    align-items: end;
+    
+}
+.bheader_con_2>a{
+    background-image: url(https://blog.myfitnesspal.com/wp-content/themes/under-armour/assets/images/site-mfp/sprite.png);
+    background-repeat: no-repeat;
+    margin:auto;
+    width: 350px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    background-position: left -169px;
+    background-size: 355px;
+    background-repeat: no-repeat;
+    height: 40px;
+    text-decoration: none;
+    transition: all .3s ease;
+    cursor: pointer;
+    background-color: transparent;
+}
+.bheader_con_3>a img{
+    width: 25px;
+}
+.bheader_con_3>a{
+    padding: 0px 10px;
+}
+    
+.bpost_main_con{
+        width: 70%;
+        
+}  
+.bpost_main_con>div>div img{
+    width: 100%;
+} 
+
+.bpost_auth_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0px 10px;
+}
+.bpost_auth_topcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bpost_auth_topcon> p>span{
+    color: #0066ee;
+    font-weight: 300;
+}
+.bpost_auth_topcon> p{
+    font-weight: 300;
+    font-size: 12px;
+    color: #47494a;
+}
+.bpost_auth_mnarration{
+    text-align: left;
+}
+.bpost_auth_mnarration>p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #47494a;
+}
+
+.loadercontainer {
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.834)
+        url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center
+        no-repeat;
+    z-index: 1;
+}
+
+.bpost_adet_con{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+.bpost_adet_con>div{
+    margin-left: 10px;
+}
+.bpost_adet_con>div>h3{
+    color: #0066ee;
+    margin-bottom: 10px;
+
+}
+.bpost_adet_con>div>p{
+    font-size: 15px;
+}
+
+.bpage_main_cont{
+    margin: 10px 200px;
+}
+
+.bpost_title_div{
+    display: flex;
+}
+
+@media only screen and (max-width:1024px) and (min-width:768px) {
+    .blist_con{
+        display: grid;
+        
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+    }
+
+    .bpage_main_cont{
+        margin: 10px 50px;
+    }
+}
+
+@media only screen and (max-width:767px) and (min-width:0px) {
+    .blist_con{
+        display: grid;
+        
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    }
+    .blist_ft_nar{
+      
+    }
+
+    .blist_feature_tcon{
+ 
+        width: 100%;
+        background: #ffffff;
+        position: static;
+    }
+    .blist_feature_con{
+        position:unset;
+    }
+
+    .bpage_main_cont{
+        margin: 10px 10px;
+    }
+
+    .bpost_title_div{
+        display: block;
+    }
+
+   
+    
+}
+
